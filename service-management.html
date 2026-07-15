@@ -1,4 +1,14 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth" style=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Team - Sunergy</title><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Management Consulting Services from Sunergy - Bid management, vendor selection, due diligence and lender engineering." name="description">
+    <title>Management Consulting - Sunergy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         try {
             tailwind.config = {
                 darkMode: "class",
@@ -19,10 +29,10 @@
                             "outline-variant": "#bfc7d1",
                             "primary-container": "#60B0E9",
                             "surface-container-low": "#F8FBFF",
-                            "surface-container-lowest": "#ffffff",
-                            "custom-gradient-start": "#A7D4F3",
-                            "custom-gradient-end": "#60B0E9",
-                            "text-body": "#777B93"
+                            "surface-container-lowest": "#ffffff"
+                        },
+                        "backgroundImage": {
+                            "primary-gradient": "linear-gradient(135deg, #A7D4F3 0%, #60B0E9 100%)",
                         },
                         "borderRadius": {
                             "DEFAULT": "0.125rem",
@@ -32,53 +42,41 @@
                         },
                         "spacing": {
                             "component-padding-md": "24px",
-                            "component-padding-sm": "16px",
                             "section-gap-mobile": "64px",
+                            "component-padding-sm": "16px",
                             "section-gap-desktop": "120px",
                             "grid-gutter": "30px"
                         },
                         "fontFamily": {
-                            "headline-md": ["Montserrat"],
-                            "display-hero": ["Montserrat"],
+                            "body-md": ["Montserrat"],
                             "display-hero-mobile": ["Montserrat"],
                             "caption": ["Montserrat"],
-                            "label-caps": ["Montserrat"],
                             "headline-lg": ["Montserrat"],
-                            "body-md": ["Montserrat"],
-                            "body-lg": ["Montserrat"]
+                            "display-hero": ["Montserrat"],
+                            "body-lg": ["Montserrat"],
+                            "label-caps": ["Montserrat"],
+                            "headline-md": ["Montserrat"]
                         },
                         "fontSize": {
-                            "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
-                            "display-hero": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
                             "display-hero-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
                             "caption": ["13px", {"lineHeight": "1.5", "fontWeight": "500"}],
-                            "label-caps": ["14px", {"lineHeight": "1.6", "letterSpacing": "0.1em", "fontWeight": "700"}],
                             "headline-lg": ["36px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                            "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}]
+                            "display-hero": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                            "label-caps": ["14px", {"lineHeight": "1.6", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                            "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
                         },
-                        "backgroundImage": {
-                            "brand-gradient": "linear-gradient(135deg, #a7d4f3 0%, #60b0e9 100%)"
+                        "transitionDuration": {
+                            "DEFAULT": "400ms"
                         }
                     },
                 },
-            }
+            };
         } catch (_e) {}
-    }catch(_e){}</script><style>
-        .custom-gradient-text {
-            background: linear-gradient(135deg, #a7d4f3 0%, #60b0e9 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .custom-gradient {
-            background: linear-gradient(135deg, #a7d4f3 0%, #60b0e9 100%);
-        }
-        .social-hover-gradient:hover {
-            background: linear-gradient(135deg, #a7d4f3 0%, #60b0e9 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style></head><body class="bg-background text-on-background font-body-md selection:bg-primary/30 selection:text-slate-dark">
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary/30 selection:text-slate-dark">
     <!-- Top Utility Bar -->
     <div class="hidden md:block bg-surface-container-lowest border-b border-outline-variant/30">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-grid-gutter py-2 text-caption text-on-surface-variant font-medium">
@@ -142,7 +140,7 @@
                     </div>
                 </div>
                 <div class="relative group inline-block">
-                    <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80 flex items-center gap-0.5" href="services.html">
+                    <a class="nav-link active font-label-caps text-label-caps text-primary pb-1 relative flex items-center gap-0.5" href="services.html">
                         Services <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span>
                     </a>
                     <!-- Dropdown Menu -->
@@ -158,7 +156,7 @@
                 </div>
                 <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="company.html">Company</a>
                 <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="projects.html">Projects</a>
-                <a class="nav-link active font-label-caps text-label-caps text-primary pb-1 relative" href="team.html">Team</a>
+                <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="team.html">Team</a>
                 <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="media.html">Media</a>
                 <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="blog.html">Blog</a>
                 <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="careers.html">Careers</a>
@@ -166,118 +164,97 @@
             </div>
         </nav>
     </header>
-<main>
-<!-- Breadcrumb Hero Section -->
-<section class="relative h-[300px] md:h-[400px] flex items-center overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="A high-angle panoramic view of a massive solar farm at sunset, with rows of shimmering blue panels reflecting the golden sky." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCx8GkJTZFpO758A-sQqqCzhsQ1YDCjL1BIFrcnFmSar84aF5obmz0JR1ImkAdoXxOHV1SkWOZRgIcdotsmSmXcoE9DM4cQio5dvO3ERKyxzTGY5SWeDeLWQySHpkWojx-JLQxMtv1-1lSRFidJNvm0I9t8PAgOqkilKZELkXCwRWKm5zYb0LgzUlvp8kJjEGluvUQNGEZy-_8D4Q0vdhReaa_RkOiicyQcNXVC0JskHr7-IOealD8yCMlDNCMndXTq2HQ&quot;);"></div>
-<div class="absolute inset-0 breadcrumb-overlay bg-black/40"></div>
-<div class="relative w-full max-w-7xl mx-auto px-grid-gutter text-center md:text-left">
-<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-surface-container-lowest mb-4">
-                    Meet Our <span class="custom-gradient-text">Team</span>
-</h1>
-<nav class="flex justify-center md:justify-start items-center gap-2 text-surface-container-lowest font-label-caps text-label-caps opacity-90">
-<a class="hover:text-primary-container" href="index.html">Home</a>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<span class="custom-gradient-text">Team</span>
-</nav>
-</div>
-</section>
-<!-- Team Grid Section -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface">
-<div class="max-w-7xl mx-auto px-grid-gutter">
-<!-- Section Header -->
-<div class="max-w-3xl mb-16">
-<p class="font-label-caps text-label-caps text-primary mb-2">EXPERTS BEHIND THE SUN</p>
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Innovative Minds <span class="font-bold custom-gradient-text">Powering</span> the Future</h2>
-<p class="text-body-lg text-text-body">Our team of dedicated professionals brings decades of collective experience in renewable energy, engineering, and sustainable urban planning to every project we undertake.</p>
-</div>
-<!-- Three-Column Team Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
-<!-- Team Member: Peter Spencer -->
-<div class="group flex flex-col items-center text-center">
-<div class="relative w-full aspect-[4/5] overflow-hidden mb-6 rounded-lg shadow-sm border border-outline-variant bg-white">
-<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Professional studio portrait of Peter Spencer" src="https://lh3.googleusercontent.com/aida/AP1WRLvHUeryGa5UImHlv8cuZ579WBAfJcD_XXsfQZUM5lXJlp4aD7c34uLiHgk3wEQCJF1G2_NvFPitqFi1xRYYHqGoSMHp98QbEWyh5KvWL62r3agkQW-_C0G3syqV_yVWSVcgnu79pOAAV7KYIo9e6y_duXe58q_LR19AqFvbrfG1XS6CDfvCw_6k4uz4AE2rn4Loualpf4OfZn9aP4CVtwJY5vaQ3o93tgdUf6DZLDC8pWXyJOda8Pgwjmg">
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Peter Spencer</h3>
-<p class="font-label-caps text-label-caps custom-gradient-text mb-4">CHIEF EXECUTIVE OFFICER</p>
-<div class="flex gap-4">
-<a class="text-outline social-hover-gradient transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-<a class="text-outline social-hover-gradient transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
-</div>
-</div>
-<!-- Team Member: Gabe Giordano -->
-<div class="group flex flex-col items-center text-center">
-<div class="relative w-full aspect-[4/5] overflow-hidden mb-6 rounded-lg shadow-sm border border-outline-variant bg-white">
-<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Professional headshot of Gabe Giordano" src="https://lh3.googleusercontent.com/aida/AP1WRLti9GaZ8L_teFqWIOoTl6O7HfSF8dfKz7Qw_2pemYExX3Q6XXgFLw5JGiodqhWK8Vl0IaV1Lt0wsAEIglg1XaTd0znGGyBs1ZlStJh4I4CdR0iOG4_TPci8HbcFJ-EDKIKki3Jyj_Qj3VMBDblFxfR3HF4abVtO0EW4YNHvGmXfLbfuazi7_tEsP0DYK-2q420QyYBlDgCdQfZ4CGYuCMKmofjH3HosZxOmo-jJFxAhBRx1Xg2aBJMUzyX6">
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Gabe Giordano</h3>
-<p class="font-label-caps text-label-caps custom-gradient-text mb-4">PROJECT MANAGER</p>
-<div class="flex gap-4">
-<a class="text-outline social-hover-gradient transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-<a class="text-outline social-hover-gradient transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
-</div>
-</div>
-<!-- Team Member: Byron Frisch -->
-<div class="group flex flex-col items-center text-center">
-<div class="relative w-full aspect-[4/5] overflow-hidden mb-6 rounded-lg shadow-sm border border-outline-variant bg-white">
-<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Corporate professional portrait of Byron Frisch" src="https://lh3.googleusercontent.com/aida/AP1WRLs8AwXIEU6CfIZqh9UXkU8XDb7-p4zpDWdq5mEHM0eQC67BDF_3MLxpRg7bAuQrxBJIczu3m_esZQe9D9C6XpXMJINb-lTxw-ZmtIsMQhtAZMwfr18rmmq5_6lh2kO3tYk_-C-yPDOuy5x7RgPy8ws8RhLqS0uvj4vPstLFxmcUpLS3qBqQqrc4mftMfaNxGMbSVCjo1NoMzU_WZVifWpaQyxzpDamxWR97p-Oe4kRQdvZqdkMN7KY3jtWf">
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Byron Frisch</h3>
-<p class="font-label-caps text-label-caps custom-gradient-text mb-4">CHIEF ENGINEER</p>
-<div class="flex gap-4">
-<a class="text-outline social-hover-gradient transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-<a class="text-outline social-hover-gradient transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Why Work With Us (Editorial Content) -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-muted">
-<div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="relative">
-<div class="aspect-square bg-surface-container-high rounded-full absolute -top-10 -left-10 w-40 h-40 opacity-50"></div>
-<img class="relative z-10 rounded-xl shadow-xl border-4 border-surface-container-lowest" data-alt="Collaborative workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzB0w--6q4dJ86xfGQGCI9J5fDzgw8mGXMOEMmDB6cLzz9Fm6mK5oIws1ilGwzBZy9sQ2MtQvIW7t9XgnhBsgCNXXWGa8DxZXFPKDiRDZEr0t4dxto5gC9YETP6IUh24qIxX-1MGSClPsMqlo5HRB3hdvP7e6Zzu4l9NgDGQuWw7_qBAxyTnO0CUOSPVm6C1L4Qtx4PkYWEtW81HjOI-s92Pu24C-ljquInvDRlkCvbIyYtQkxVuOBqXRq7MbrxBTZE1w">
-</div>
-<div>
-<p class="font-label-caps text-label-caps text-primary mb-4">OUR WORK ETHIC</p>
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Driven by <span class="custom-gradient-text">Passion</span> and Expertise</h2>
-<ul class="space-y-6">
-<li class="flex items-start gap-4">
-<div class="w-10 h-10 rounded-full bg-brand-gradient flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-surface-container-lowest" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<div>
-<h4 class="font-headline-md text-[18px] text-on-surface">Technical Excellence</h4>
-<p class="text-text-body">Our team consists of certified specialists who maintain the highest standards of safety and efficiency.</p>
-</div>
-</li>
-<li class="flex items-start gap-4">
-<div class="w-10 h-10 rounded-full bg-brand-gradient flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-surface-container-lowest" style="font-variation-settings: 'FILL' 1;">eco</span>
-</div>
-<div>
-<h4 class="font-headline-md text-[18px] text-on-surface">Sustainable Focus</h4>
-<p class="text-text-body">We don't just build systems; we build a cleaner future for generations to come through innovation.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-20 bg-brand-gradient">
-<div class="max-w-7xl mx-auto px-grid-gutter text-center">
-<h2 class="font-headline-lg text-headline-lg text-inverse-surface mb-8">Want to Join Our <span class="text-on-primary">Growing</span> Team?</h2>
-<a class="inline-flex items-center px-10 py-4 bg-inverse-surface text-surface-container-lowest font-label-caps text-label-caps rounded hover:bg-on-surface-variant transition-all group shadow-lg" href="contacts.html">
-                    VIEW OPEN POSITIONS 
-                    <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</section>
-</main>
+
+    <!-- Page Hero Section -->
+    <section class="py-16 md:py-24 bg-surface-container-low border-b border-outline-variant/30 text-center">
+        <div class="max-w-4xl mx-auto px-grid-gutter">
+            <h1 class="font-display text-[40px] md:text-[48px] font-bold text-slate-dark leading-tight mb-4">Management Consulting</h1>
+            <p class="text-on-surface-variant text-base md:text-lg max-w-2xl mx-auto font-medium">Bid management, vendor selection, due diligence and lender engineering.</p>
+        </div>
+    </section>
+
+    <!-- Service Details & Scope -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-grid-gutter grid lg:grid-cols-[1fr_300px] gap-16 items-start">
+            <!-- Left: Main Detail Content -->
+            <div>
+                <div class="rounded-2xl overflow-hidden shadow-md aspect-[16/9] mb-10">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="Management Consulting" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/20 text-slate-dark">
+                        <span class="material-symbols-outlined text-2xl text-primary font-bold">work</span>
+                    </div>
+                    <h2 class="font-headline-lg text-2xl md:text-3xl font-bold text-slate-dark">Service Scope</h2>
+                </div>
+                <p class="text-on-surface-variant/80 text-sm leading-relaxed mb-8">Our management consulting engagement covers every deliverable required to take your solar project from concept to switch-on, supported by Kingsol's nationwide network and engineering bench.</p>
+                
+                <h3 class="font-headline-md text-lg font-bold text-slate-dark mb-6">Key Deliverables Covered</h3>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="flex items-start gap-3 rounded-xl border border-outline-variant/30 p-4 bg-surface-container-low">
+                        <span class="material-symbols-outlined text-primary text-xl font-bold mt-0.5">check_circle</span>
+                        <span class="text-sm font-semibold text-slate-dark">EPC Bid Management</span>
+                    </div>
+                    <div class="flex items-start gap-3 rounded-xl border border-outline-variant/30 p-4 bg-surface-container-low">
+                        <span class="material-symbols-outlined text-primary text-xl font-bold mt-0.5">check_circle</span>
+                        <span class="text-sm font-semibold text-slate-dark">Vendor Selection & Auditing</span>
+                    </div>
+                    <div class="flex items-start gap-3 rounded-xl border border-outline-variant/30 p-4 bg-surface-container-low">
+                        <span class="material-symbols-outlined text-primary text-xl font-bold mt-0.5">check_circle</span>
+                        <span class="text-sm font-semibold text-slate-dark">Technical Due Diligence</span>
+                    </div>
+                    <div class="flex items-start gap-3 rounded-xl border border-outline-variant/30 p-4 bg-surface-container-low">
+                        <span class="material-symbols-outlined text-primary text-xl font-bold mt-0.5">check_circle</span>
+                        <span class="text-sm font-semibold text-slate-dark">Project Management Consulting</span>
+                    </div>
+                    <div class="flex items-start gap-3 rounded-xl border border-outline-variant/30 p-4 bg-surface-container-low">
+                        <span class="material-symbols-outlined text-primary text-xl font-bold mt-0.5">check_circle</span>
+                        <span class="text-sm font-semibold text-slate-dark">Lender's Engineering & Reporting</span>
+                    </div>
+                    <div class="flex items-start gap-3 rounded-xl border border-outline-variant/30 p-4 bg-surface-container-low">
+                        <span class="material-symbols-outlined text-primary text-xl font-bold mt-0.5">check_circle</span>
+                        <span class="text-sm font-semibold text-slate-dark">Plant Performance Assessment</span>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-8 border-t border-outline-variant/30">
+                    <a class="btn-transition inline-block bg-primary hover:bg-slate-dark text-white font-bold py-4 px-10 rounded-xl uppercase tracking-wider text-xs shadow-md" href="contacts.html">Request a Quote</a>
+                </div>
+            </div>
+
+            <!-- Right: Sticky Sidebar for Other Services -->
+            <aside class="lg:sticky lg:top-28 space-y-6">
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest text-on-surface-variant font-bold mb-4 border-b border-outline-variant/30 pb-2">Other Services</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a class="flex items-center gap-3 p-4 border border-outline-variant/30 bg-surface-container-low hover:border-primary transition-colors rounded-xl font-semibold text-sm text-slate-dark" href="service-consulting.html">
+                                <span class="material-symbols-outlined text-primary text-lg font-bold">explore</span> Solar Consulting
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex items-center gap-3 p-4 border border-outline-variant/30 bg-surface-container-low hover:border-primary transition-colors rounded-xl font-semibold text-sm text-slate-dark" href="service-epc.html">
+                                <span class="material-symbols-outlined text-primary text-lg font-bold">engineering</span> Project EPC
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex items-center gap-3 p-4 border border-outline-variant/30 bg-surface-container-low hover:border-primary transition-colors rounded-xl font-semibold text-sm text-slate-dark" href="service-after-sales.html">
+                                <span class="material-symbols-outlined text-primary text-lg font-bold">support</span> After Sales Service
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex items-center gap-3 p-4 border border-outline-variant/30 bg-surface-container-low hover:border-primary transition-colors rounded-xl font-semibold text-sm text-slate-dark" href="service-integrator.html">
+                                <span class="material-symbols-outlined text-primary text-lg font-bold">schema</span> System Integration
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-slate-dark pt-24 pb-12 text-white/70">
+    <footer class="bg-slate-dark pt-24 pb-12 text-white/70 font-body-md">
         <div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
             <!-- Brand -->
             <div class="space-y-8">
@@ -332,4 +309,6 @@
         <div class="max-w-7xl mx-auto px-grid-gutter border-t border-white/10 pt-8 text-center text-xs">
             © 2026 Sunergy. All Rights Reserved.
         </div>
-    </footer></body></html>
+    </footer>
+</body>
+</html>
