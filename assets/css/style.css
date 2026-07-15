@@ -1,0 +1,518 @@
+/* Sunergy Custom Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #006497;
+    --primary-light: #a7d4f3;
+    --primary-dark: #004b73;
+    --primary-gradient: linear-gradient(135deg, #a7d4f3 0%, #60b0e9 100%);
+    --secondary: #735c00;
+    --secondary-container: #fcd664;
+    --slate-dark: #2B3152;
+    --slate-light: #404850;
+    --bg-light: #f7f9ff;
+    --surface-muted: #F8FAFC;
+    --on-surface: #091d2e;
+    --on-surface-variant: #404850;
+    --outline-variant: rgba(191, 199, 209, 0.3);
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --font-main: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--slate-dark);
+    background-color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    font-weight: 600;
+    color: var(--slate-dark);
+}
+
+.text-label-caps {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.font-display-hero {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+    .font-display-hero {
+        font-size: 32px;
+    }
+}
+
+/* Custom Gradients */
+.gradient-text {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-primary-gradient {
+    background: var(--primary-gradient);
+}
+
+/* Top Utility Bar */
+.top-utility-bar {
+    background-color: var(--surface-muted);
+    border-bottom: 1px solid var(--outline-variant);
+    font-size: 13px;
+}
+
+.top-utility-bar a {
+    color: var(--slate-light);
+    text-decoration: none;
+}
+
+.top-utility-bar a:hover {
+    color: var(--primary);
+}
+
+/* Navbar */
+.main-navbar {
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.main-navbar.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.nav-link {
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--slate-dark);
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.nav-link.active {
+    border-bottom-color: var(--primary);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 700px;
+    background-color: var(--slate-dark);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(43, 49, 82, 0.5);
+    z-index: 1;
+}
+
+.hero-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Buttons */
+.btn-custom {
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.btn-custom-primary {
+    background: var(--primary-gradient);
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(96, 176, 233, 0.3);
+}
+
+.btn-custom-primary:hover {
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+.btn-custom-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-custom-outline:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-custom-dark {
+    background-color: var(--slate-dark);
+    color: #ffffff;
+}
+
+.btn-custom-dark:hover {
+    background: var(--primary-gradient);
+    color: #ffffff;
+}
+
+.btn-custom-white {
+    background-color: #ffffff;
+    color: var(--primary);
+    border: 2px solid #ffffff;
+}
+
+.btn-custom-white:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+/* Sections & Gaps */
+.section-gap {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+    .section-gap {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+}
+
+.bg-light-section {
+    background-color: var(--bg-light);
+}
+
+.bg-muted-section {
+    background-color: var(--surface-muted);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card-hover img {
+    transition: transform 0.5s ease;
+}
+
+.card-hover:hover img {
+    transform: scale(1.05);
+}
+
+.card-feature {
+    border-bottom: 4px solid transparent;
+}
+
+.card-feature:hover {
+    border-bottom-color: var(--primary);
+}
+
+.icon-container {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 100, 151, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+}
+
+.icon-container .material-symbols-outlined {
+    font-size: 36px;
+    color: var(--primary);
+}
+
+/* Benefits Section Background */
+.benefits-accent-panel {
+    background: var(--primary-gradient);
+}
+
+.benefit-number {
+    font-size: 56px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.2);
+    line-height: 1;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(191, 199, 209, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.project-card img {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    background: var(--primary-gradient);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 6px 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.circle-arrow-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.circle-arrow-btn:hover {
+    opacity: 0.9;
+    transform: translateX(3px);
+    color: #ffffff;
+}
+
+/* Breadcrumb Hero Section */
+.breadcrumb-hero {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.breadcrumb-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(9, 29, 46, 0.45);
+    z-index: 1;
+}
+
+.breadcrumb-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.breadcrumb-content {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb-hero nav ol {
+    background: transparent;
+    padding: 0;
+}
+
+.breadcrumb-hero nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.breadcrumb-hero nav a:hover {
+    color: var(--primary-light);
+}
+
+/* Project Filter Buttons */
+.filter-btn {
+    padding: 12px 30px;
+    border-radius: 9999px;
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    border: 1px solid rgba(191, 199, 209, 0.5);
+    transition: all 0.3s ease;
+    color: var(--slate-dark);
+}
+
+.filter-btn:hover, .filter-btn.active-filter {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.filter-btn.active-filter {
+    background: var(--primary-gradient);
+    color: #ffffff !important;
+    border-color: transparent;
+}
+
+/* Project overlay */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 100, 151, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+/* Testimonial slider styles */
+.testimonial-item {
+    transition: opacity 0.5s ease;
+}
+
+.testimonial-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(167, 212, 243, 0.2);
+}
+
+/* Contact form styles */
+.form-underlined input, .form-underlined textarea {
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    background: transparent !important;
+    color: #ffffff !important;
+    padding: 12px 4px;
+    border-radius: 0;
+}
+
+.form-underlined input:focus, .form-underlined textarea:focus {
+    box-shadow: none;
+    border-bottom-color: #ffffff;
+}
+
+.form-underlined input::placeholder, .form-underlined textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Team details */
+.team-member-image {
+    position: relative;
+    border-bottom: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.group:hover .team-member-image {
+    border-bottom-color: var(--primary);
+}
+
+.team-member-image img {
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+}
+
+.group:hover .team-member-image img {
+    filter: grayscale(0);
+}
+
+/* Social icons list */
+.social-icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon-btn:hover {
+    background: var(--primary-gradient);
+    color: #ffffff;
+}
+
+.social-outline-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(191, 199, 209, 0.3);
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--slate-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-outline-btn:hover {
+    background: var(--primary-gradient);
+    color: #ffffff;
+    border-color: transparent;
+}
