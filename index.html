@@ -94,12 +94,60 @@
                 <button class="material-symbols-outlined text-on-surface-variant hover:text-primary p-2 transition-colors">search</button>
             </div>
         </div>
-        <nav class="max-w-7xl mx-auto px-grid-gutter flex items-center justify-start h-14 bg-white">
-            <div class="flex items-center gap-8">
+        <nav class="max-w-7xl mx-auto px-grid-gutter flex items-center justify-start h-14 bg-white overflow-x-auto scrollbar-none">
+            <div class="flex items-center gap-8 whitespace-nowrap">
                 <a class="nav-link active font-label-caps text-label-caps text-primary pb-1 relative" href="index.html">Home</a>
+                <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="about.html">About Us</a>
+                <div class="relative group inline-block">
+                    <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80 flex items-center gap-0.5" href="products.html">
+                        Products <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span>
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 top-full mt-1 hidden group-hover:grid grid-cols-2 gap-6 bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[380px] whitespace-normal">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-wider text-primary mb-3">Solar Panels</h4>
+                            <ul class="space-y-2 text-xs font-semibold text-on-surface-variant">
+                                <li><a class="hover:text-primary transition-colors block py-0.5" href="swelect.html">SWELECT</a></li>
+                                <li><a class="hover:text-primary transition-colors block py-0.5" href="saatvik.html">Saatvik</a></li>
+                                <li><a class="hover:text-primary transition-colors block py-0.5" href="vikram.html">Vikram Solar</a></li>
+                                <li><a class="hover:text-primary transition-colors block py-0.5" href="jinko.html">Jinko Solar</a></li>
+                                <li><a class="hover:text-primary transition-colors block py-0.5" href="ja-solar.html">JA Solar</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-wider text-primary mb-3">Inverters</h4>
+                            <ul class="space-y-2 text-xs font-semibold text-on-surface-variant mb-4">
+                                <li><a class="hover:text-primary transition-colors block py-0.5" href="solis.html">Solis</a></li>
+                                <li><a class="hover:text-primary transition-colors block py-0.5" href="sungrow.html">Sungrow</a></li>
+                            </ul>
+                            <h4 class="font-bold text-xs uppercase tracking-wider text-primary mb-3">BOS</h4>
+                            <ul class="space-y-2 text-xs font-semibold text-on-surface-variant">
+                                <li><a class="hover:text-primary transition-colors block py-0.5" href="bos.html">Accessories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group inline-block">
+                    <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80 flex items-center gap-0.5" href="services.html">
+                        Services <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span>
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 top-full mt-1 hidden group-hover:block bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[280px] whitespace-normal">
+                        <ul class="space-y-3 text-xs font-semibold text-on-surface-variant">
+                            <li><a class="hover:text-primary transition-colors block py-0.5" href="service-consulting.html">Solar Consulting</a></li>
+                            <li><a class="hover:text-primary transition-colors block py-0.5" href="service-epc.html">Project EPC Services</a></li>
+                            <li><a class="hover:text-primary transition-colors block py-0.5" href="service-management.html">Management Consulting</a></li>
+                            <li><a class="hover:text-primary transition-colors block py-0.5" href="service-after-sales.html">After Sales Service</a></li>
+                            <li><a class="hover:text-primary transition-colors block py-0.5" href="service-integrator.html">System Integration</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="company.html">Company</a>
                 <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="projects.html">Projects</a>
                 <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="team.html">Team</a>
+                <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="media.html">Media</a>
+                <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="blog.html">Blog</a>
+                <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="careers.html">Careers</a>
                 <a class="nav-link font-label-caps text-label-caps text-slate-dark hover:text-primary hover:opacity-80" href="contacts.html">Contacts</a>
             </div>
         </nav>
@@ -470,9 +518,14 @@
                 <h4 class="font-label-caps text-label-caps text-white mb-10 border-b border-primary/40 pb-4 inline-block uppercase tracking-widest font-bold">Quick Links</h4>
                 <ul class="space-y-4 text-sm font-medium">
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="index.html">Home</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="projects.html">Projects</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="about.html">About Us</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="products.html">Products</a></li>
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="company.html">Company</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="projects.html">Projects</a></li>
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="team.html">Team</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="media.html">Media</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="blog.html">Blog</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="careers.html">Careers</a></li>
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="contacts.html">Contacts</a></li>
                 </ul>
             </div>
@@ -480,10 +533,11 @@
             <div class="">
                 <h4 class="font-label-caps text-label-caps text-white mb-10 border-b border-primary/40 pb-4 inline-block uppercase tracking-widest font-bold">Service Offerings</h4>
                 <ul class="space-y-4 text-sm font-medium">
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="#">Solar System</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="#">Wind Farms</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="#">Environment</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="#">Recycling</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="service-consulting.html">Solar Consulting</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="service-epc.html">Project EPC</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="service-management.html">Management Consulting</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="service-after-sales.html">After Sales Service</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="service-integrator.html">System Integration</a></li>
                 </ul>
             </div>
             <!-- Office -->
