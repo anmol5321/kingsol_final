@@ -1,4 +1,4 @@
-/* Sunergy Custom Stylesheet */
+/* Kingsol Custom Stylesheet */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -30,7 +30,12 @@ body {
 }
 
 /* Typography Overrides */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-main);
     font-weight: 600;
     color: var(--slate-dark);
@@ -94,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
     position: sticky;
     top: 0;
     z-index: 1030;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .nav-link {
@@ -109,7 +114,8 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 2px solid transparent;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--primary) !important;
 }
 
@@ -389,7 +395,8 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--slate-dark);
 }
 
-.filter-btn:hover, .filter-btn.active-filter {
+.filter-btn:hover,
+.filter-btn.active-filter {
     border-color: var(--primary);
     color: var(--primary);
 }
@@ -441,7 +448,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Contact form styles */
-.form-underlined input, .form-underlined textarea {
+.form-underlined input,
+.form-underlined textarea {
     border: none;
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     background: transparent !important;
@@ -450,12 +458,14 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0;
 }
 
-.form-underlined input:focus, .form-underlined textarea:focus {
+.form-underlined input:focus,
+.form-underlined textarea:focus {
     box-shadow: none;
     border-bottom-color: #ffffff;
 }
 
-.form-underlined input::placeholder, .form-underlined textarea::placeholder {
+.form-underlined input::placeholder,
+.form-underlined textarea::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 

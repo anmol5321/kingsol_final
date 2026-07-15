@@ -1,7 +1,36 @@
-// Sunergy Custom JavaScript Logic
+// Kingsol Custom JavaScript Logic
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    // --- 0. Parallax Effect ---
+    function updateParallax() {
+        // 1. Handle img elements with .parallax-img
+        const parallaxImgs = document.querySelectorAll('.parallax-img');
+        parallaxImgs.forEach(img => {
+            const scrollPosition = window.scrollY;
+            const yOffset = scrollPosition * 0.3; // Slower, more subtle parallax
+            img.style.transform = `translateY(${yOffset}px)`;
+            img.style.transition = 'transform 0.1s ease-out';
+        });
+        
+        // 2. Handle div elements with .parallax-bg (background-image)
+        const parallaxDivs = document.querySelectorAll('.parallax-bg');
+        parallaxDivs.forEach(div => {
+            if (div.children.length === 0 || !div.querySelector('.parallax-img')) {
+                // Only apply to divs that don't have a parallax-img inside
+                const scrollPosition = window.scrollY;
+                const yOffset = scrollPosition * 0.3;
+                div.style.backgroundPosition = `center ${yOffset}px`;
+                div.style.transition = 'background-position 0.1s ease-out';
+            }
+        });
+    }
     
+    // Add event listener
+    window.addEventListener('scroll', updateParallax);
+    // Initial call
+    updateParallax();
+
     // --- 1. Sticky Navbar scroll listener ---
     const header = document.querySelector('.main-navbar');
     if (header) {
@@ -37,13 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    window.nextTestimonial = function() {
+    window.nextTestimonial = function () {
         if (testimonials.length === 0) return;
         currentTestimonial = (currentTestimonial + 1) % testimonials.length;
         showTestimonial(currentTestimonial);
     };
 
-    window.prevTestimonial = function() {
+    window.prevTestimonial = function () {
         if (testimonials.length === 0) return;
         currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
         showTestimonial(currentTestimonial);
@@ -63,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 filterBtns.forEach(b => {
                     b.classList.remove('active-filter');
                 });
-                
+
                 // Add active styling to clicked button
                 btn.classList.add('active-filter');
 
@@ -105,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!submitBtn) return;
 
             const originalContent = submitBtn.innerHTML;
-            
+
             // Show sending state
             submitBtn.innerHTML = `
                 <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" class="light" style="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">try {
+            try {
+                tailwind.config = {
+                    darkMode: "class",
+                    theme: {
+                        extend: {
+                            "colors": {
+                                "on-tertiary": "#ffffff",
+                                "on-surface-variant": "#404850",
+                                "surface-container-high": "#d9eaff",
+                                "secondary-fixed": "#ffe088",
+                                "secondary-fixed-dim": "#e7c353",
+                                "primary-container": "#4fa3e1",
+                                "surface-bright": "#f7f9ff",
+                                "primary-fixed-dim": "#92ccff",
+                                "on-secondary": "#ffffff",
+                                "on-background": "#091d2e",
+                                "outline-variant": "#bfc7d1",
+                                "on-secondary-fixed": "#241a00",
+                                "secondary": "#735c00",
+                                "inverse-on-surface": "#e8f2ff",
+                                "tertiary-container": "#81a939",
+                                "on-error-container": "#93000a",
+                                "surface-container-low": "#edf4ff",
+                                "surface-container-lowest": "#ffffff",
+                                "on-secondary-container": "#745c00",
+                                "surface-tint": "#006497",
+                                "background": "#f7f9ff",
+                                "tertiary-fixed": "#c5f178",
+                                "inverse-primary": "#92ccff",
+                                "outline": "#707881",
+                                "error-container": "#ffdad6",
+                                "on-tertiary-fixed": "#131f00",
+                                "slate-dark": "#2B3152",
+                                "primary-fixed": "#cce5ff",
+                                "on-primary-fixed-variant": "#004b73",
+                                "surface-dim": "#c9dcf3",
+                                "on-primary-fixed": "#001e31",
+                                "secondary-container": "#fcd664",
+                                "surface-muted": "#F8FAFC",
+                                "surface-variant": "#d1e4fb",
+                                "on-tertiary-container": "#263a00",
+                                "surface-container": "#e3efff",
+                                "error": "#ba1a1a",
+                                "on-tertiary-fixed-variant": "#354e00",
+                                "on-surface": "#091d2e",
+                                "tertiary-fixed-dim": "#aad55f",
+                                "on-primary-container": "#003756",
+                                "on-error": "#ffffff",
+                                "on-secondary-fixed-variant": "#574500",
+                                "surface": "#f7f9ff",
+                                "primary": "#006497",
+                                "inverse-surface": "#203243",
+                                "tertiary": "#476800",
+                                "on-primary": "#ffffff",
+                                "text-body": "#777B93",
+                                "surface-container-highest": "#d1e4fb",
+                                "custom-gradient-start": "#a7d4f3",
+                                "custom-gradient-end": "#60b0e9"
+                            },
+                            "borderRadius": {
+                                "DEFAULT": "0.125rem",
+                                "lg": "0.25rem",
+                                "xl": "0.5rem",
+                                "full": "0.75rem"
+                            },
+                            "spacing": {
+                                "component-padding-md": "24px",
+                                "component-padding-sm": "16px",
+                                "section-gap-mobile": "64px",
+                                "section-gap-desktop": "120px",
+                                "grid-gutter": "30px"
+                            },
+                            "fontFamily": {
+                                "headline-md": ["Montserrat"],
+                                "display-hero": ["Montserrat"],
+                                "display-hero-mobile": ["Montserrat"],
+                                "caption": ["Montserrat"],
+                                "label-caps": ["Montserrat"],
+                                "headline-lg": ["Montserrat"],
+                                "body-md": ["Montserrat"],
+                                "body-lg": ["Montserrat"]
+                            },
+                            "fontSize": {
+                                "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                                "display-hero": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                                "display-hero-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                                "caption": ["13px", { "lineHeight": "1.5", "fontWeight": "500" }],
+                                "label-caps": ["14px", { "lineHeight": "1.6", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                                "headline-lg": ["36px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                                "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                                "body-lg": ["18px", { "lineHeight": "1.7", "fontWeight": "400" }]
+                            },
+                            "backgroundImage": {
+                                "custom-gradient": "linear-gradient(to bottom right, #a7d4f3, #60b0e9)"
+                            }
+                        },
+                    },
+                }
+            } catch (_e) { }
+        } catch (_e) { }</script>
+    <meta charset="utf-8">
+</head>
+
+<body class="bg-background text-on-background font-body-md">
+    <!-- Top Utility Bar -->
+    <div class="bg-on-background text-white py-2 hidden md:block">
+        <div class="max-w-7xl mx-auto px-grid-gutter flex justify-between items-center text-caption">
+            <div class="flex gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[16px] text-primary-fixed-dim"
+                        data-original-icon="location_on">location_on</span>
+                    <span class="">121 King Street, Melbourne, Australia</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[16px] text-primary-fixed-dim"
+                        data-original-icon="alternate_email">alternate_email</span>
+                    <span class="">info@Kingsol.com</span>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-primary-fixed-dim transition-colors">facebook</a>
+                <a href="#" class="hover:text-primary-fixed-dim transition-colors">twitter</a>
+                <a href="#" class="hover:text-primary-fixed-dim transition-colors">linkedin</a>
+            </div>
+        </div>
+    </div>
+    <!-- Main Navigation (TopNavBar-->
+    <nav class="bg-surface-container-lowest sticky top-0 z-50 border-b border-outline-variant shadow-sm">
+        <div class="flex flex-col w-full max-w-7xl mx-auto px-grid-gutter md:px-section-gap-desktop">
+            <div class="flex items-center justify-between h-20">
+                <div class="font-headline-md text-headline-md font-bold text-primary">
+                    Kingsol
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="{{DATA:SCREEN:SCREEN_16}}"
+                        class="text-on-surface-variant font-body-md hover:text-primary transition-colors">Home</a>
+                    <a href="{{DATA:SCREEN:SCREEN_18}}"
+                        class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md">Company</a>
+                    <a href="{{DATA:SCREEN:SCREEN_5}}"
+                        class="text-on-surface-variant font-body-md hover:text-primary transition-colors">Projects</a>
+                    <a href="{{DATA:SCREEN:SCREEN_3}}"
+                        class="text-on-surface-variant font-body-md hover:text-primary transition-colors">Team</a>
+                    <a href="#"
+                        class="text-on-surface-variant font-body-md hover:text-primary transition-colors">Blog</a>
+                    <a href="#"
+                        class="text-on-surface-variant font-body-md hover:text-primary transition-colors">Pages</a>
+                    <a href="#"
+                        class="text-on-surface-variant font-body-md hover:text-primary transition-colors">Shop</a>
+                    <a href="{{DATA:SCREEN:SCREEN_4}}"
+                        class="text-on-surface-variant font-body-md hover:text-primary transition-colors">Contacts</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 text-on-surface-variant hover:text-primary">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                    <button class="md:hidden p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Breadcrumb Hero Section -->
+    <section class="relative h-[400px] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-cover bg-center"
+                data-alt="A cinematic, wide-angle shot of a sprawling solar farm in a lush green valley at sunrise."
+                style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AP1WRLsqxAhIHPshZGq4JkyaltpT9UfC8Lc0tDlGQTcn6K1yU4VLMPPpHFH0DKxGAHExmvbB3iAwhvNV3C_NY9SjauLku8EDc2lJ26AuDr3s5HrKzi_8J4_3INcRHI6uRp_ww4L9hneqOp_nOrwg3167oxAMhx-i2ceg5SgSn6S8JiXpBVaFcSIIYsfYmGoIoW7_K-gRmUTydtukhIlAv3kMzvIWqg6pMN5gLMom2B0ftffX-Ki943IV3nm67g0q&quot;);">
+            </div>
+            <div class="absolute inset-0 bg-custom-gradient/60"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-grid-gutter w-full">
+            <h1 class="font-display-hero text-display-hero text-white mb-4">Company</h1>
+            <nav class="flex items-center gap-2 text-white/80 font-label-caps text-label-caps">
+                <a class="hover:text-white transition-colors" href="#">HOME</a>
+                <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                <span class="text-white">COMPANY</span>
+            </nav>
+        </div>
+    </section>
+    <!-- About Company Section -->
+    <section class="py-section-gap-desktop bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto px-grid-gutter">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-grid-gutter items-center">
+                <div class="relative">
+                    <div class="w-full aspect-square md:aspect-video lg:aspect-square bg-cover bg-center rounded-lg shadow-lg"
+                        data-alt="A professional portrait of renewable energy engineers discussing project blueprints."
+                        style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDBclVGw5bve15ygOPS04BtVqyZsERtS6O-JjgXiHEqhimVgwbe1ivggUK7XZWflSS8B51DZYG8HL61l-PAf7OKXBvM7CvuxADKwaLrfSgkdEs68I-5OyjEeTuelticEgVTZJm_vyV337jwgpx8vYUVs4tjI5VQBaVRu-LGlUTA6F8L4FsqtLodcbT8ZvwS7iRVs_av7NVLSjpwV54ehwqa0KhNzSE0nQYhNviccOp4WXlCiBhQRVTyiGo8dQonwPQ8Hmg&quot;);">
+                    </div>
+                    <!-- Video Play Button Style -->
+                    <button
+                        class="absolute inset-0 m-auto w-24 h-24 bg-custom-gradient text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform group">
+                        <span class="material-symbols-outlined text-[48px] fill-icon ml-2">play_arrow</span>
+                    </button>
+                </div>
+                <div class="lg:pl-10">
+                    <h2 class="font-label-caps text-label-caps text-custom-gradient-end mb-4">ABOUT COMPANY</h2>
+                    <h3 class="font-headline-lg text-headline-lg text-on-background mb-6">
+                        We Provide <span class="font-extrabold text-custom-gradient-end">Commercial</span> and
+                        Residential Solar Systems
+                    </h3>
+                    <p class="text-text-body font-body-lg mb-8">
+                        Kingsol is a global leader in the renewable energy sector, committed to driving the transition
+                        to sustainable power. With over a decade of technical expertise, we specialize in delivering
+                        high-efficiency solar and wind solutions tailored for modern infrastructures.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-custom-gradient-end text-[32px]">verified</span>
+                            <div>
+                                <h4 class="font-bold text-on-background">Certified Experts</h4>
+                                <p class="text-caption text-text-body">Industry-leading engineering team</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-custom-gradient-end text-[32px]">eco</span>
+                            <div>
+                                <h4 class="font-bold text-on-background">Eco-Friendly</h4>
+                                <p class="text-caption text-text-body">100% Sustainable energy focus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="bg-custom-gradient text-white px-8 py-4 font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-all flex items-center gap-2 uppercase">
+                        LEARN MORE
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us Section -->
+    <section class="py-section-gap-desktop bg-surface-muted">
+        <div class="max-w-7xl mx-auto px-grid-gutter text-center mb-16">
+            <h2 class="font-label-caps text-label-caps text-custom-gradient-end mb-4">BENEFITS</h2>
+            <h3 class="font-headline-lg text-headline-lg text-on-background">Why <span
+                    class="font-extrabold text-custom-gradient-end">Choose</span> Us</h3>
+        </div>
+        <div class="max-w-7xl mx-auto px-grid-gutter">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+                <!-- Reason 1 -->
+                <div
+                    class="bg-custom-gradient p-10 rounded-lg relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-md">
+                    <span
+                        class="absolute -top-4 -right-4 font-headline-lg text-[80px] font-extrabold opacity-10 text-white select-none">01</span>
+                    <span class="material-symbols-outlined text-white text-[48px] mb-6">workspace_premium</span>
+                    <h4 class="font-headline-md text-white mb-4">Quality Work</h4>
+                    <p class="text-white/80 font-body-md">We use the highest-grade PV modules and components for maximum
+                        longevity.</p>
+                </div>
+                <!-- Reason 2 -->
+                <div
+                    class="bg-custom-gradient p-10 rounded-lg relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-md">
+                    <span
+                        class="absolute -top-4 -right-4 font-headline-lg text-[80px] font-extrabold opacity-10 text-white select-none">02</span>
+                    <span class="material-symbols-outlined text-white text-[48px] mb-6">engineering</span>
+                    <h4 class="font-headline-md text-white mb-4">Best Service</h4>
+                    <p class="text-white/80 font-body-md">Our maintenance teams are available 24/7 to ensure peak
+                        performance.</p>
+                </div>
+                <!-- Reason 3 -->
+                <div
+                    class="bg-custom-gradient p-10 rounded-lg relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-md">
+                    <span
+                        class="absolute -top-4 -right-4 font-headline-lg text-[80px] font-extrabold opacity-10 text-white select-none">03</span>
+                    <span class="material-symbols-outlined text-white text-[48px] mb-6">handshake</span>
+                    <h4 class="font-headline-md text-white mb-4">Honest Team</h4>
+                    <p class="text-white/80 font-body-md">Transparent pricing and clear timelines for every installation
+                        project.</p>
+                </div>
+                <!-- Reason 4 -->
+                <div
+                    class="bg-custom-gradient p-10 rounded-lg relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-md">
+                    <span
+                        class="absolute -top-4 -right-4 font-headline-lg text-[80px] font-extrabold opacity-10 text-white select-none">04</span>
+                    <span class="material-symbols-outlined text-white text-[48px] mb-6">monitoring</span>
+                    <h4 class="font-headline-md text-white mb-4">Modern Tech</h4>
+                    <p class="text-white/80 font-body-md">Advanced monitoring systems to track your energy output in
+                        real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stats Counter Section -->
+    <section class="py-20 bg-slate-dark text-white">
+        <div class="max-w-7xl mx-auto px-grid-gutter">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+                <div>
+                    <div class="text-[52px] font-extrabold text-custom-gradient-start mb-2">12+</div>
+                    <div class="font-label-caps text-label-caps text-white/60">YEARS EXPERIENCE</div>
+                </div>
+                <div>
+                    <div class="text-[52px] font-extrabold text-custom-gradient-start mb-2">850</div>
+                    <div class="font-label-caps text-label-caps text-white/60">PROJECTS DONE</div>
+                </div>
+                <div>
+                    <div class="text-[52px] font-extrabold text-custom-gradient-start mb-2">120</div>
+                    <div class="font-label-caps text-label-caps text-white/60">EXPERT WORKERS</div>
+                </div>
+                <div>
+                    <div class="text-[52px] font-extrabold text-custom-gradient-start mb-2">10k+</div>
+                    <div class="font-label-caps text-label-caps text-white/60">HAPPY CLIENTS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Slider -->
+    <section class="py-section-gap-desktop bg-surface-container-lowest overflow-hidden">
+        <div class="max-w-7xl mx-auto px-grid-gutter">
+            <div class="text-center mb-16">
+                <h2 class="font-label-caps text-label-caps text-custom-gradient-end mb-4">TESTIMONIALS</h2>
+                <h3 class="font-headline-lg text-headline-lg text-on-background">What Our <span
+                        class="font-extrabold text-custom-gradient-end">Clients</span> Say</h3>
+            </div>
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Slider Container -->
+                <div class="relative min-h-[300px]" id="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-item testimonial-active transition-all duration-500 text-center px-10">
+                        <span
+                            class="material-symbols-outlined text-custom-gradient-end/20 text-[80px] mb-4">format_quote</span>
+                        <p class="font-body-lg text-on-background italic mb-8">
+                            "Kingsol transformed our manufacturing facility with their solar grid. The ROI was visible
+                            within the first 12 months. Their technical expertise and after-sales support are truly
+                            world-class."
+                        </p>
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 rounded-full bg-cover bg-center mb-4 ring-4 ring-custom-gradient-start/20"
+                                data-alt="A professional headshot of Robert Wilson"
+                                style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AP1WRLsqxAhIHPshZGq4JkyaltpT9UfC8Lc0tDlGQTcn6K1yU4VLMPPpHFH0DKxGAHExmvbB3iAwhvNV3C_NY9SjauLku8EDc2lJ26AuDr3s5HrKzi_8J4_3INcRHI6uRp_ww4L9hneqOp_nOrwg3167oxAMhx-i2ceg5SgSn6S8JiXpBVaFcSIIYsfYmGoIoW7_K-gRmUTydtukhIlAv3kMzvIWqg6pMN5gLMom2B0ftffX-Ki943IV3nm67g0q&quot;);">
+                            </div>
+                            <h4 class="font-bold text-on-background">Robert Wilson</h4>
+                            <p class="text-caption text-custom-gradient-end font-bold">CEO, TECHCORP SOLUTIONS</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 (Hidden Initially) -->
+                    <div class="testimonial-item testimonial-inactive transition-all duration-500 text-center px-10"
+                        style="display: none;">
+                        <span
+                            class="material-symbols-outlined text-custom-gradient-end/20 text-[80px] mb-4">format_quote</span>
+                        <p class="font-body-lg text-on-background italic mb-8">
+                            "Switching to Kingsol was the best decision for our community center. The installation was
+                            seamless, and we've reduced our carbon footprint significantly. A truly reliable partner in
+                            sustainability."
+                        </p>
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 rounded-full bg-cover bg-center mb-4 ring-4 ring-custom-gradient-start/20"
+                                data-alt="A professional headshot of Sarah Jenkins"
+                                style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AP1WRLs8qCTXDyHMIfBCIRsCQlZnwFTP5w0IB8GaVJcOirYZwwuiq6NEI6bdlFR5P1iGz7MeIyg7Hlbzpuw9zipjS4KqjzwlU93BTid0l7YV0SWKSelrHW461zhiyhoyrWlshi1KA334P6Sj1Mn3k0ozSv-qX9JYF3h0zTnM-J_p2K781SJbeazcJeUND64hR2g_qmxWdl31NMa4VI0K7qQHmjbg7A-Afs8aLlfYK-Ni8Mu_KX4O-aOcyNDVnmYY&quot;);">
+                            </div>
+                            <h4 class="font-bold text-on-background">Sarah Jenkins</h4>
+                            <p class="text-caption text-custom-gradient-end font-bold">SUSTAINABILITY DIRECTOR</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Controls -->
+                <div class="flex justify-center gap-4 mt-12">
+                    <button
+                        class="p-3 border border-outline hover:bg-custom-gradient-end hover:text-white transition-all rounded-lg group"
+                        onclick="prevTestimonial()">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button
+                        class="p-3 border border-outline hover:bg-custom-gradient-end hover:text-white transition-all rounded-lg group"
+                        onclick="nextTestimonial()">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-slate-dark text-white pt-20 pb-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter w-full max-w-7xl mx-auto px-grid-gutter pb-16">
+            <div>
+                <div class="font-headline-md text-headline-md font-bold text-custom-gradient-start mb-6">
+                    Kingsol
+                </div>
+                <p class="text-white/60 mb-6 font-body-md">
+                    Leading the world in renewable energy solutions with cutting-edge technology and unparalleled
+                    expertise.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-custom-gradient-end transition-colors"
+                        href="#">facebook</a>
+                    <a class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-custom-gradient-end transition-colors"
+                        href="#">twitter</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-headline-md text-[18px] mb-8 font-bold">Quick Links</h4>
+                <ul class="space-y-4 text-white/60">
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors"
+                            href="{{DATA:SCREEN:SCREEN_16}}">Home</a></li>
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors"
+                            href="{{DATA:SCREEN:SCREEN_5}}">Projects</a></li>
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors"
+                            href="{{DATA:SCREEN:SCREEN_18}}">Company</a></li>
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors"
+                            href="{{DATA:SCREEN:SCREEN_3}}">Team</a></li>
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors" href="#">Blog</a></li>
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors"
+                            href="{{DATA:SCREEN:SCREEN_4}}">Contacts</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-headline-md text-[18px] mb-8 font-bold">Our Services</h4>
+                <ul class="space-y-4 text-white/60">
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors" href="#">Environment</a>
+                    </li>
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors" href="#">Recycling</a>
+                    </li>
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors" href="#">Solar System</a>
+                    </li>
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors" href="#">Wind Farms</a>
+                    </li>
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors" href="#">Wind System</a>
+                    </li>
+                    <li class=""><a class="hover:text-custom-gradient-start transition-colors" href="#">Working
+                            Process</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h4 class="font-headline-md text-[18px] mb-8 font-bold">Newsletter</h4>
+                <p class="text-white/60 mb-6 font-body-md">Subscribe to get latest news and updates.</p>
+                <form class="relative">
+                    <input
+                        class="w-full bg-white/10 border-none rounded-lg py-4 px-6 focus:ring-2 focus:ring-custom-gradient-start text-white"
+                        placeholder="Email Address" type="email">
+                    <button
+                        class="absolute right-2 top-2 bottom-2 bg-custom-gradient px-4 rounded-lg hover:opacity-90 transition-colors">
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-grid-gutter pt-8 border-t border-white/10 text-center text-white/40 text-caption">
+            © 2024 Kingsol. All Rights Reserved.
+        </div>
+    </footer>
+    <script class="">
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-item');
+
+        function showTestimonial(index) {
+            testimonials.forEach((item, i) => {
+                if (i === index) {
+                    item.classList.remove('testimonial-inactive');
+                    item.classList.add('testimonial-active');
+                    item.style.display = 'block';
+                } else {
+                    item.classList.remove('testimonial-active');
+                    item.classList.add('testimonial-inactive');
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        function prevTestimonial() {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }</script>
+</body>
+
+</html>
