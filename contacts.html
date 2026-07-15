@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contacts - Sunergy</title><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{try{
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#404850",
+                    "surface-container-high": "#d9eaff",
+                    "secondary-fixed": "#ffe088",
+                    "secondary-fixed-dim": "#e7c353",
+                    "primary-container": "#4fa3e1",
+                    "surface-bright": "#f7f9ff",
+                    "primary-fixed-dim": "#92ccff",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#091d2e",
+                    "outline-variant": "#bfc7d1",
+                    "on-secondary-fixed": "#241a00",
+                    "secondary": "#735c00",
+                    "inverse-on-surface": "#e8f2ff",
+                    "tertiary-container": "#81a939",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#edf4ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#745c00",
+                    "surface-tint": "#006497",
+                    "background": "#f7f9ff",
+                    "tertiary-fixed": "#c5f178",
+                    "inverse-primary": "#92ccff",
+                    "outline": "#707881",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#131f00",
+                    "slate-dark": "#2B3152",
+                    "primary-fixed": "#cce5ff",
+                    "on-primary-fixed-variant": "#004b73",
+                    "surface-dim": "#c9dcf3",
+                    "on-primary-fixed": "#001e31",
+                    "secondary-container": "#fcd664",
+                    "surface-muted": "#F8FAFC",
+                    "surface-variant": "#d1e4fb",
+                    "on-tertiary-container": "#263a00",
+                    "surface-container": "#e3efff",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#354e00",
+                    "on-surface": "#091d2e",
+                    "tertiary-fixed-dim": "#aad55f",
+                    "on-primary-container": "#003756",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#574500",
+                    "surface": "#f7f9ff",
+                    "primary": "#006497",
+                    "inverse-surface": "#203243",
+                    "tertiary": "#476800",
+                    "on-primary": "#ffffff",
+                    "text-body": "#777B93",
+                    "surface-container-highest": "#d1e4fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "component-padding-md": "24px",
+                    "component-padding-sm": "16px",
+                    "section-gap-mobile": "64px",
+                    "section-gap-desktop": "120px",
+                    "grid-gutter": "30px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "display-hero": ["Montserrat"],
+                    "display-hero-mobile": ["Montserrat"],
+                    "caption": ["Montserrat"],
+                    "label-caps": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "body-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-hero": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-hero-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "caption": ["13px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                    "label-caps": ["14px", {"lineHeight": "1.6", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg": ["36px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    }catch(_e){}}catch(_e){}</script><style>
+        .custom-gradient-text {
+            background: linear-gradient(135deg, #a7d4f3 0%, #60b0e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-gradient {
+            background: linear-gradient(135deg, #a7d4f3 0%, #60b0e9 100%);
+        }
+        .social-hover-gradient:hover {
+            background: linear-gradient(135deg, #a7d4f3 0%, #60b0e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style></head><body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="w-full z-50 sticky top-0 bg-surface-container-lowest dark:bg-inverse-surface shadow-sm dark:shadow-none">
+<!-- Top Utility Bar -->
+<div class="hidden md:block border-b border-outline-variant dark:border-outline">
+<div class="max-w-7xl mx-auto px-grid-gutter py-2 flex justify-between items-center text-on-surface-variant font-label-caps text-[12px]">
+<div class="flex gap-6">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-original-icon="location_on">location_on</span>
+                        121 King Street, Melbourne VIC 3000, Australia
+                    </span>
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-original-icon="alternate_email">alternate_email</span>
+                        info@sunergy.com
+                    </span>
+</div>
+<div class="flex gap-4">
+<a href="#" class="hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">facebook</span></a>
+<a href="#" class="hover:text-primary transition-colors">X</a>
+<a href="#" class="hover:text-primary transition-colors">IN</a>
+</div>
+</div>
+</div>
+<!-- Main Navigation -->
+<nav class="flex flex-col w-full max-w-7xl mx-auto px-grid-gutter md:px-section-gap-desktop">
+<div class="flex items-center justify-between h-20">
+<a class="flex items-center gap-2" href="index.html">
+    <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+    <span class="font-headline-md text-primary font-bold text-2xl">SUNERGY</span>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a href="index.html" class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-200 font-label-caps text-label-caps">Home</a>
+<a href="company.html" class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-200 font-label-caps text-label-caps">Company</a>
+<a href="projects.html" class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-200 font-label-caps text-label-caps">Projects</a>
+<a href="team.html" class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-200 font-label-caps text-label-caps">Team</a>
+<a href="contacts.html" class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-label-caps text-label-caps">Contacts</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">search</button>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<!-- Breadcrumb Hero Section -->
+<section class="relative h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0" data-alt="A cinematic, wide-angle landscape of a modern solar farm during a golden sunset." style="background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center center;"></div>
+<div class="absolute inset-0 bg-on-surface/40 z-10"></div>
+<div class="relative z-20 text-center text-white px-grid-gutter">
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero mb-4">Contacts</h1>
+<div class="flex items-center justify-center gap-2 font-label-caps text-label-caps opacity-90">
+<a class="hover:text-primary-fixed transition-colors" href="index.html">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="">Contacts</span>
+</div>
+</div>
+</section>
+<!-- Contact Cards Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop max-w-7xl mx-auto px-grid-gutter">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter text-center">
+<!-- Phone Card -->
+<div class="bg-surface-muted p-component-padding-md border border-outline-variant/30 rounded shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-16 h-16 custom-gradient rounded-full flex items-center justify-center mx-auto mb-6 text-white">
+<span class="material-symbols-outlined text-[32px]">call</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Phones</h3>
+<p class="text-on-surface-variant font-bold text-primary mb-1">1-800-123-4567</p>
+<p class="text-text-body font-body-md text-body-md">1-800-987-6543</p>
+</div>
+<!-- Address Card -->
+<div class="bg-surface-muted p-component-padding-md border border-outline-variant/30 rounded shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-16 h-16 custom-gradient rounded-full flex items-center justify-center mx-auto mb-6 text-white">
+<span class="material-symbols-outlined text-[32px]">location_on</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Address</h3>
+<p class="text-text-body font-body-md text-body-md">121 King Street, Melbourne<br>Victoria 3000 Australia</p>
+</div>
+<!-- Email Card -->
+<div class="bg-surface-muted p-component-padding-md border border-outline-variant/30 rounded shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-16 h-16 custom-gradient rounded-full flex items-center justify-center mx-auto mb-6 text-white">
+<span class="material-symbols-outlined text-[32px]">alternate_email</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Email</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">info@sunergy.com</p>
+<p class="text-text-body font-body-md text-body-md">support@sunergy.com</p>
+</div>
+<!-- Working Hours Card -->
+<div class="bg-surface-muted p-component-padding-md border border-outline-variant/30 rounded shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-16 h-16 custom-gradient rounded-full flex items-center justify-center mx-auto mb-6 text-white">
+<span class="material-symbols-outlined text-[32px]">schedule</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Working Hours</h3>
+<p class="text-text-body font-body-md text-body-md">Mon - Fri: 9:00 - 18:00<br>Sat - Sun: Closed</p>
+</div>
+</div>
+</section>
+<!-- Map and Consultation Section -->
+<section class="pb-section-gap-mobile md:pb-section-gap-desktop max-w-7xl mx-auto px-grid-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden shadow-xl rounded-lg border border-outline-variant/20">
+<!-- Map Visual -->
+<div class="min-h-[450px] bg-surface-container overflow-hidden">
+<div class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700" data-alt="Melbourne Digital Map" data-location="Melbourne, Australia" style="background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center center;"></div>
+</div>
+<!-- Free Consultation Form -->
+<div class="bg-white p-component-padding-md md:p-12">
+<div class="mb-8">
+<span class="text-primary font-label-caps text-label-caps tracking-widest block mb-2 uppercase">Get in Touch</span>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-surface">Free Consultation</h2>
+<div class="w-16 h-1 custom-gradient"></div>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative">
+<label class="block text-[12px] font-label-caps text-on-surface mb-1 uppercase opacity-70">Full Name</label>
+<input class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 py-3 bg-transparent placeholder-text-body/50 transition-colors outline-none text-on-surface" placeholder="John Doe" type="text">
+</div>
+<div class="relative">
+<label class="block text-[12px] font-label-caps text-on-surface mb-1 uppercase opacity-70">Email Address</label>
+<input class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 py-3 bg-transparent placeholder-text-body/50 transition-colors outline-none text-on-surface" placeholder="john@example.com" type="email">
+</div>
+</div>
+<div class="relative">
+<label class="block text-[12px] font-label-caps text-on-surface mb-1 uppercase opacity-70">Subject</label>
+<input class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 py-3 bg-transparent placeholder-text-body/50 transition-colors outline-none text-on-surface" placeholder="How can we help?" type="text">
+</div>
+<div class="relative">
+<label class="block text-[12px] font-label-caps text-on-surface mb-1 uppercase opacity-70">Your Message</label>
+<textarea class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 py-3 bg-transparent placeholder-text-body/50 transition-colors outline-none resize-none text-on-surface" placeholder="Write your query here..." rows="4"></textarea>
+</div>
+<div class="pt-4">
+<button class="custom-gradient text-white font-label-caps text-label-caps px-10 py-4 rounded-sm flex items-center gap-3 group hover:shadow-lg transition-all transform hover:-translate-y-0.5" type="submit">
+                                SEND MESSAGE
+                                <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">trending_flat</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Toll Free Prom-->
+<section class="custom-gradient text-white py-16">
+<div class="max-w-7xl mx-auto px-grid-gutter flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-[32px]">support_agent</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps opacity-90 mb-1">HAVE ANY QUESTIONS?</p>
+<h4 class="font-headline-md text-headline-md">Our Experts are Ready to Help You</h4>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps opacity-90">TOLL FREE:</span>
+<a class="font-display-hero text-display-hero-mobile hover:text-on-surface transition-colors" href="tel:18001234567">1-800-123-4567</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface text-white border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter w-full max-w-7xl mx-auto px-grid-gutter py-section-gap-mobile md:py-section-gap-desktop">
+<!-- Brand Column -->
+<div class="space-y-6">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="index.html"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[32px]">wb_sunny</span><span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim text-primary-fixed-dim">Sunergy</span></div></a>
+<p class="text-surface-variant font-body-md text-body-md">Leading the transition to clean energy through innovative solar and wind solutions. Expert installation and maintenance since 2010.</p>
+<div class="flex gap-4"><a class="w-10 h-10 border border-outline-variant/30 rounded flex items-center justify-center text-surface-variant hover:bg-primary hover:text-white hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-[20px]">facebook</span></a><a class="w-10 h-10 border border-outline-variant/30 rounded flex items-center justify-center text-surface-variant hover:bg-primary hover:text-white hover:border-primary transition-all" href="#"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a class="w-10 h-10 border border-outline-variant/30 rounded flex items-center justify-center text-surface-variant hover:bg-primary hover:text-white hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a></div>
+</div>
+<!-- Links Column 1 -->
+<div>
+<h4 class="font-label-caps text-label-caps mb-8 text-white">Main Links</h4>
+<ul class="space-y-3">
+<li class=""><a class="text-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="index.html">Home</a></li>
+<li class=""><a class="text-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="projects.html">Projects</a></li>
+<li class=""><a class="text-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="company.html">Company</a></li>
+<li class=""><a class="text-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="team.html">Team</a></li>
+<li class=""><a class="text-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="contacts.html">Contacts</a></li>
+</ul>
+</div>
+<!-- Links Column 2 -->
+<div>
+<h4 class="font-label-caps text-label-caps mb-8 text-white">Solutions</h4>
+<ul class="space-y-3">
+<li class=""><a class="text-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="#">Solar System</a></li>
+<li class=""><a class="text-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="#">Wind Farms</a></li>
+<li class=""><a class="text-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="#">Recycling</a></li>
+<li class=""><a class="text-surface-variant hover:text-primary-fixed-dim transition-colors font-body-md" href="#">Environment</a></li>
+</ul>
+</div>
+<!-- Contact Column -->
+<div class="">
+<h4 class="font-label-caps text-label-caps mb-8 text-white">Subscribe</h4>
+<p class="text-surface-variant font-body-md mb-4">Stay updated with our latest energy insights.</p>
+<div class="relative">
+<input class="w-full bg-white border border-outline-variant p-3 rounded-sm pr-12 focus:ring-primary focus:border-primary text-slate-dark" placeholder="Email Address" type="email">
+<button class="absolute right-2 top-1/2 -translate-y-1/2 text-primary hover:text-primary-container">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-6">
+<div class="max-w-7xl mx-auto px-grid-gutter text-center text-surface-variant font-body-md opacity-60">
+                © 2026 Sunergy. All Rights Reserved.
+            </div>
+</div>
+</footer>
+<script class="">
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('form');
+            if(form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const btn = form.querySelector('button[type="submit"]');
+                    if (!btn) return;
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = 'SENDING...';
+                    btn.disabled = true;
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = 'MESSAGE SENT!';
+                        form.reset();
+                        setTimeout(() => {
+                            btn.innerHTML = originalText;
+                            btn.disabled = false;
+                        }, 3000);
+                    }, 1500);
+                });
+            }
+        });
+</script></body></html>
