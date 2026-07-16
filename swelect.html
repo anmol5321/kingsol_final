@@ -114,7 +114,7 @@
                         Products <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span>
                     </a>
                     <!-- Dropdown Menu -->
-                    <div class="absolute left-0 top-full mt-1 hidden group-hover:grid grid-cols-2 gap-6 bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[380px] whitespace-normal">
+                    <div class="absolute left-0 top-full mt-1 hidden group-hover:grid grid-cols-2 gap-6 bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[380px] whitespace-normal before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3">
                         <div>
                             <h4 class="font-bold text-xs uppercase tracking-wider text-primary mb-3">Solar Panels</h4>
                             <ul class="space-y-2 text-xs font-semibold text-on-surface-variant">
@@ -143,7 +143,7 @@
                         Services <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span>
                     </a>
                     <!-- Dropdown Menu -->
-                    <div class="absolute left-0 top-full mt-1 hidden group-hover:block bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[280px] whitespace-normal">
+                    <div class="absolute left-0 top-full mt-1 hidden group-hover:block bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[280px] whitespace-normal before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3">
                         <ul class="space-y-3 text-xs font-semibold text-on-surface-variant">
                             <li><a class="hover:text-primary transition-colors block py-0.5" href="service-consulting.html">Solar Consulting</a></li>
                             <li><a class="hover:text-primary transition-colors block py-0.5" href="service-epc.html">Project EPC Services</a></li>
@@ -333,11 +333,22 @@
     <section class="py-12 bg-surface-container-low border-t border-b border-outline-variant/20 overflow-hidden">
         <style>
             @keyframes marquee-products {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
             }
+
             .animate-marquee-products {
                 animation: marquee-products 30s linear infinite;
+            }
+
+            /* Pause slider on hover */
+            .product-slider-track:hover .animate-marquee-products {
+                animation-play-state: paused;
             }
         </style>
         <div class="max-w-7xl mx-auto px-grid-gutter mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
@@ -349,7 +360,8 @@
                 VIEW ALL PRODUCTS <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
             </a>
         </div>
-        <div class="w-full overflow-hidden relative">
+        <div class="product-slider-track max-w-7xl mx-auto px-grid-gutter relative">
+            <div class="overflow-hidden relative">
             <!-- Fade gradients on edges -->
             <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface-container-low to-transparent z-10 pointer-events-none"></div>
             <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface-container-low to-transparent z-10 pointer-events-none"></div>
@@ -538,6 +550,7 @@
                     <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors" href="vikram.html">EXPLORE PRODUCT <span class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
@@ -613,8 +626,9 @@
             </form>
         </div>      
         <!-- Contact Pane -->
-        <div class="w-full lg:w-1/2 relative flex items-center justify-center p-12 md:p-24 overflow-hidden" style="background-color:#f0f6fc;">
-            <div class="absolute inset-0 z-0" style="background-image:url('image.png/india-warehouse-map.png'); background-size:contain; background-repeat:no-repeat; background-position:center; opacity:0.35;"></div>
+        <div class="w-full lg:w-1/2 relative flex items-center justify-center overflow-hidden" style="background-color:#f0f6fc;">
+            <div class="absolute inset-0 z-0" style="background-image:url('image.png/india-warehouse-map.png'); background-size:contain; background-repeat:no-repeat; background-position:center; opacity:0.55;"></div>
+            <!--
             <div class="relative z-10 text-center max-w-md">
                 <div class="w-24 h-24 bg-slate-dark shadow-2xl flex items-center justify-center text-white mx-auto mb-12 rounded-xl">
                     <span class="material-symbols-outlined text-4xl">location_on</span>
@@ -622,7 +636,6 @@
                 <p class="text-on-surface-variant font-label-caps text-label-caps mb-6 uppercase tracking-[0.2em] font-bold">If you would like to speak with someone directly</p>
                 <h2 class="font-headline-lg text-4xl text-slate-dark mb-8">Call Us <span class="gradient-text font-bold">Toll Free</span></h2>
                 <div class="text-[64px] font-bold gradient-text tracking-tighter leading-none mb-12">800.567.1234</div>
-                <!-- Floating Contact Widgets -->
                 <div class="flex justify-center gap-6">
                     <a class="btn-transition w-14 h-14 bg-white border border-outline-variant/30 flex items-center justify-center text-primary rounded-lg hover:bg-primary-gradient hover:text-white shadow-sm" href="mailto:sunergy@site.com">
                         <span class="material-symbols-outlined text-2xl">mail</span>
@@ -632,16 +645,17 @@
                     </a>
                 </div>
             </div>
+            -->
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-slate-dark pt-24 pb-12 text-white/70 font-body-md">
-        <div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+        <div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-20">
             <!-- Brand -->
             <div class="space-y-8">
                 <a class="flex items-center gap-2" href="index.html">
-                    <img src="image.png/logo.png" alt="Sunergy Logo" class="h-16 w-auto">
+                    <img src="image.png/logo.png" alt="Sunergy Logo" class="h-24 w-auto">
                 </a>
                 <p class="text-sm leading-relaxed">Leading the way in renewable energy with innovative solar and wind solutions for modern enterprises and homes.</p>
                 <div class="flex gap-4">
@@ -652,14 +666,23 @@
             </div>
             <!-- Quick Links -->
             <div class="">
-                <h4 class="font-label-caps text-label-caps text-white mb-10 border-b border-primary/40 pb-4 inline-block uppercase tracking-widest font-bold">Quick Links</h4>
+                <h4
+                    class="font-label-caps text-label-caps text-white mb-10 border-b border-primary/40 pb-4 inline-block uppercase tracking-widest font-bold">
+                    Quick Links</h4>
                 <ul class="space-y-4 text-sm font-medium">
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="index.html">Home</a></li>
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="about.html">About Us</a></li>
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="products.html">Products</a></li>
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="company.html">Company</a></li>
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="projects.html">Projects</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="team.html">Team</a></li>
+                </ul>
+            </div>
+            <!-- Resources -->
+            <div class="">
+                <h4
+                    class="font-label-caps text-label-caps text-white mb-10 border-b border-primary/40 pb-4 inline-block uppercase tracking-widest font-bold">
+                    Resources</h4>
+                <ul class="space-y-4 text-sm font-medium">
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="media.html">Media</a></li>
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="blog.html">Blog</a></li>
                     <li class=""><a class="hover:text-primary transition-colors duration-400" href="careers.html">Careers</a></li>

@@ -171,7 +171,7 @@
                     </a>
                     <!-- Dropdown Menu -->
                     <div
-                        class="absolute left-0 top-full mt-1 hidden group-hover:grid grid-cols-2 gap-6 bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[380px] whitespace-normal">
+                        class="absolute left-0 top-full mt-1 hidden group-hover:grid grid-cols-2 gap-6 bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[380px] whitespace-normal before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3">
                         <div>
                             <h4 class="font-bold text-xs uppercase tracking-wider text-primary mb-3">Solar Panels</h4>
                             <ul class="space-y-2 text-xs font-semibold text-on-surface-variant">
@@ -195,11 +195,7 @@
                                 <li><a class="hover:text-primary transition-colors block py-0.5"
                                         href="sungrow.html">Sungrow</a></li>
                             </ul>
-                            <h4 class="font-bold text-xs uppercase tracking-wider text-primary mb-3">BOS</h4>
-                            <ul class="space-y-2 text-xs font-semibold text-on-surface-variant">
-                                <li><a class="hover:text-primary transition-colors block py-0.5"
-                                        href="bos.html">Accessories</a></li>
-                            </ul>
+
                         </div>
                     </div>
                 </div>
@@ -211,7 +207,7 @@
                     </a>
                     <!-- Dropdown Menu -->
                     <div
-                        class="absolute left-0 top-full mt-1 hidden group-hover:block bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[280px] whitespace-normal">
+                        class="absolute left-0 top-full mt-1 hidden group-hover:block bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[280px] whitespace-normal before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3">
                         <ul class="space-y-3 text-xs font-semibold text-on-surface-variant">
                             <li><a class="hover:text-primary transition-colors block py-0.5"
                                     href="service-consulting.html">Solar Consulting</a></li>
@@ -617,6 +613,11 @@
             .animate-marquee-products {
                 animation: marquee-products 30s linear infinite;
             }
+
+            /* Pause slider on hover */
+            .product-slider-track:hover .animate-marquee-products {
+                animation-play-state: paused;
+            }
         </style>
         <div
             class="max-w-7xl mx-auto px-grid-gutter mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
@@ -630,281 +631,301 @@
                 VIEW ALL PRODUCTS <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
             </a>
         </div>
-        <div class="w-full overflow-hidden relative">
-            <!-- Fade gradients on edges -->
-            <div
-                class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface-container-low to-transparent z-10 pointer-events-none">
-            </div>
-            <div
-                class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface-container-low to-transparent z-10 pointer-events-none">
-            </div>
-
-            <div class="flex animate-marquee-products gap-8 pr-8">
-                <!-- Product Card 1: SWELECT Solar Panel -->
+        <div class="product-slider-track max-w-7xl mx-auto px-grid-gutter relative">
+            <div class="overflow-hidden relative">
+                <!-- Fade gradients on edges -->
                 <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="SWELECT Panel" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">SWELECT</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">SWELECT HH Series</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">High-efficiency half-cut mono PV
-                            modules, engineered for durability and high power output under extreme conditions.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="swelect.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface-container-low to-transparent z-10 pointer-events-none">
                 </div>
-                <!-- Product Card 2: Solis Inverter -->
                 <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Solis Inverter" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1620027136027-e3f322c2a5bf?auto=format&fit=crop&w=800&q=80">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
-                            <span class="text-xs font-bold text-primary">SOLIS</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Solis Grid-Tied Inverter
-                        </h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Triple-MPPT utility inverters
-                            designed for commercial rooftop systems with over 98.7% peak efficiency rating.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="solis.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 3: Jinko Solar -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Jinko Solar Panel" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">JINKO SOLAR</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Jinko Tiger Neo N-type</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Leading-edge N-type technology
-                            with outstanding low-light performance and bifacial power generation potential.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="jinko.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 4: Sungrow Inverter -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Sungrow Inverter" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1620027136027-e3f322c2a5bf?auto=format&fit=crop&w=800&q=80">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
-                            <span class="text-xs font-bold text-primary">SUNGROW</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Sungrow Multi-MPPT Inverter
-                        </h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Multi-MPPT string inverter
-                            featuring safe and smart management with built-in DC reverse polarity protection.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="sungrow.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 5: Saatvik Green Panel -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Saatvik Green Energy" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">SAATVIK</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Saatvik Mono PERC Panel</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Premium Tier-1 mono PERC PV
-                            modules designed to maximize solar power extraction with robust multi-busbar designs.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="saatvik.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 6: Vikram Solar Panel -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Vikram Solar Panel" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">VIKRAM SOLAR</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Vikram Somera Half-Cell</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Somera Series high-performance
-                            144-cell monocrystalline module, delivering superior performance under shaded areas.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="vikram.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface-container-low to-transparent z-10 pointer-events-none">
                 </div>
 
-                <!-- Duplicate Set for Seamless Continuous Sliding -->
-                <!-- Product Card 1: SWELECT Solar Panel -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="SWELECT Panel" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                <div class="flex animate-marquee-products gap-8 pr-8">
+                    <!-- Product Card 1: SWELECT Solar Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="SWELECT Panel" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">SWELECT</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">SWELECT HH Series</h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">High-efficiency half-cut
+                                mono PV
+                                modules, engineered for durability and high power output under extreme conditions.</p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">SWELECT</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">SWELECT HH Series</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">High-efficiency half-cut mono PV
-                            modules, engineered for durability and high power output under extreme conditions.</p>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="swelect.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="swelect.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 2: Solis Inverter -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Solis Inverter" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1620027136027-e3f322c2a5bf?auto=format&fit=crop&w=800&q=80">
+                    <!-- Product Card 2: Solis Inverter -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Solis Inverter" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1620027136027-e3f322c2a5bf?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
+                                <span class="text-xs font-bold text-primary">SOLIS</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Solis Grid-Tied Inverter
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Triple-MPPT utility
+                                inverters
+                                designed for commercial rooftop systems with over 98.7% peak efficiency rating.</p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
-                            <span class="text-xs font-bold text-primary">SOLIS</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Solis Grid-Tied Inverter
-                        </h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Triple-MPPT utility inverters
-                            designed for commercial rooftop systems with over 98.7% peak efficiency rating.</p>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="solis.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="solis.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 3: Jinko Solar -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Jinko Solar Panel" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                    <!-- Product Card 3: Jinko Solar -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Jinko Solar Panel" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">JINKO SOLAR</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Jinko Tiger Neo N-type
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Leading-edge N-type
+                                technology
+                                with outstanding low-light performance and bifacial power generation potential.</p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">JINKO SOLAR</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Jinko Tiger Neo N-type</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Leading-edge N-type technology
-                            with outstanding low-light performance and bifacial power generation potential.</p>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="jinko.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="jinko.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 4: Sungrow Inverter -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Sungrow Inverter" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1620027136027-e3f322c2a5bf?auto=format&fit=crop&w=800&q=80">
+                    <!-- Product Card 4: Sungrow Inverter -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Sungrow Inverter" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1620027136027-e3f322c2a5bf?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
+                                <span class="text-xs font-bold text-primary">SUNGROW</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Sungrow Multi-MPPT
+                                Inverter
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Multi-MPPT string inverter
+                                featuring safe and smart management with built-in DC reverse polarity protection.</p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
-                            <span class="text-xs font-bold text-primary">SUNGROW</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Sungrow Multi-MPPT Inverter
-                        </h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Multi-MPPT string inverter
-                            featuring safe and smart management with built-in DC reverse polarity protection.</p>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="sungrow.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="sungrow.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 5: Saatvik Green Panel -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Saatvik Green Energy" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                    <!-- Product Card 5: Saatvik Green Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Saatvik Green Energy" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">SAATVIK</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Saatvik Mono PERC Panel
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Premium Tier-1 mono PERC PV
+                                modules designed to maximize solar power extraction with robust multi-busbar designs.
+                            </p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">SAATVIK</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Saatvik Mono PERC Panel</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Premium Tier-1 mono PERC PV
-                            modules designed to maximize solar power extraction with robust multi-busbar designs.</p>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="saatvik.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="saatvik.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 6: Vikram Solar Panel -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Vikram Solar Panel" class="w-full h-full object-cover"
-                                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                    <!-- Product Card 6: Vikram Solar Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Vikram Solar Panel" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">VIKRAM SOLAR</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Vikram Somera Half-Cell
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Somera Series
+                                high-performance
+                                144-cell monocrystalline module, delivering superior performance under shaded areas.</p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">VIKRAM SOLAR</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Vikram Somera Half-Cell</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Somera Series high-performance
-                            144-cell monocrystalline module, delivering superior performance under shaded areas.</p>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="vikram.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="vikram.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+
+                    <!-- Duplicate Set for Seamless Continuous Sliding -->
+                    <!-- Product Card 1: SWELECT Solar Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="SWELECT Panel" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">SWELECT</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">SWELECT HH Series</h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">High-efficiency half-cut
+                                mono PV
+                                modules, engineered for durability and high power output under extreme conditions.</p>
+                        </div>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="swelect.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
+                    <!-- Product Card 2: Solis Inverter -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Solis Inverter" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1620027136027-e3f322c2a5bf?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
+                                <span class="text-xs font-bold text-primary">SOLIS</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Solis Grid-Tied Inverter
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Triple-MPPT utility
+                                inverters
+                                designed for commercial rooftop systems with over 98.7% peak efficiency rating.</p>
+                        </div>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="solis.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
+                    <!-- Product Card 3: Jinko Solar -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Jinko Solar Panel" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">JINKO SOLAR</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Jinko Tiger Neo N-type
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Leading-edge N-type
+                                technology
+                                with outstanding low-light performance and bifacial power generation potential.</p>
+                        </div>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="jinko.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
+                    <!-- Product Card 4: Sungrow Inverter -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Sungrow Inverter" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1620027136027-e3f322c2a5bf?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
+                                <span class="text-xs font-bold text-primary">SUNGROW</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Sungrow Multi-MPPT
+                                Inverter
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Multi-MPPT string inverter
+                                featuring safe and smart management with built-in DC reverse polarity protection.</p>
+                        </div>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="sungrow.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
+                    <!-- Product Card 5: Saatvik Green Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Saatvik Green Energy" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">SAATVIK</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Saatvik Mono PERC Panel
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Premium Tier-1 mono PERC PV
+                                modules designed to maximize solar power extraction with robust multi-busbar designs.
+                            </p>
+                        </div>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="saatvik.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
+                    <!-- Product Card 6: Vikram Solar Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Vikram Solar Panel" class="w-full h-full object-cover"
+                                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">VIKRAM SOLAR</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Vikram Somera Half-Cell
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Somera Series
+                                high-performance
+                                144-cell monocrystalline module, delivering superior performance under shaded areas.</p>
+                        </div>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="vikram.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -998,11 +1019,12 @@
             </form>
         </div>
         <!-- Contact Pane -->
-        <div class="w-full lg:w-1/2 relative flex items-center justify-center p-12 md:p-24 overflow-hidden"
+        <div class="w-full lg:w-1/2 relative flex items-center justify-center overflow-hidden"
             style="background-color:#f0f6fc;">
             <div class="absolute inset-0 z-0"
-                style="background-image:url('image.png/india-warehouse-map.png'); background-size:contain; background-repeat:no-repeat; background-position:center; opacity:0.35;">
+                style="background-image:url('image.png/india-warehouse-map.png'); background-size:contain; background-repeat:no-repeat; background-position:center; opacity:0.55;">
             </div>
+            <!--
             <div class="relative z-10 text-center max-w-md">
                 <div
                     class="w-24 h-24 bg-slate-dark shadow-2xl flex items-center justify-center text-white mx-auto mb-12 rounded-xl">
@@ -1015,27 +1037,28 @@
                         class="gradient-text font-bold">Toll Free</span></h2>
                 <div class="text-[64px] font-bold gradient-text tracking-tighter leading-none mb-12">800.567.1234</div>
                 <!-- Floating Contact Widgets -->
-                <div class="flex justify-center gap-6">
-                    <a class="btn-transition w-14 h-14 bg-white border border-outline-variant/30 flex items-center justify-center text-primary rounded-lg hover:bg-primary-gradient hover:text-white shadow-sm"
-                        href="mailto:Kingsol@site.com">
-                        <span class="material-symbols-outlined text-2xl">mail</span>
-                    </a>
-                    <a class="btn-transition w-14 h-14 bg-white border border-outline-variant/30 flex items-center justify-center text-primary rounded-lg hover:bg-primary-gradient hover:text-white shadow-sm"
-                        href="contacts.html">
-                        <span class="material-symbols-outlined text-2xl">chat</span>
-                    </a>
-                </div>
+            <div class="flex justify-center gap-6">
+                <a class="btn-transition w-14 h-14 bg-white border border-outline-variant/30 flex items-center justify-center text-primary rounded-lg hover:bg-primary-gradient hover:text-white shadow-sm"
+                    href="mailto:Kingsol@site.com">
+                    <span class="material-symbols-outlined text-2xl">mail</span>
+                </a>
+                <a class="btn-transition w-14 h-14 bg-white border border-outline-variant/30 flex items-center justify-center text-primary rounded-lg hover:bg-primary-gradient hover:text-white shadow-sm"
+                    href="contacts.html">
+                    <span class="material-symbols-outlined text-2xl">chat</span>
+                </a>
             </div>
+        </div>
+        -->
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-slate-dark pt-24 pb-12 text-white/70">
-        <div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+        <div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-20">
             <!-- Brand -->
             <div class="space-y-8">
                 <a class="flex items-center gap-2" href="index.html">
-                    <img src="image.png/logo.png" alt="Sunergy Logo" class="h-16 w-auto">
+                    <img src="image.png/logo.png" alt="Sunergy Logo" class="h-24 w-auto">
                 </a>
                 <p class="text-sm leading-relaxed">Leading the way in renewable energy with innovative solar and wind
                     solutions for modern enterprises and homes.</p>
@@ -1054,26 +1077,23 @@
                     class="font-label-caps text-label-caps text-white mb-10 border-b border-primary/40 pb-4 inline-block uppercase tracking-widest font-bold">
                     Quick Links</h4>
                 <ul class="space-y-4 text-sm font-medium">
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="index.html">Home</a>
-                    </li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="about.html">About
-                            Us</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="products.html">Products</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="company.html">Company</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="projects.html">Projects</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="team.html">Team</a>
-                    </li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="media.html">Media</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="blog.html">Blog</a>
-                    </li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="careers.html">Careers</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="contacts.html">Contacts</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="index.html">Home</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="about.html">About Us</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="products.html">Products</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="company.html">Company</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="projects.html">Projects</a></li>
+                </ul>
+            </div>
+            <!-- Resources -->
+            <div class="">
+                <h4
+                    class="font-label-caps text-label-caps text-white mb-10 border-b border-primary/40 pb-4 inline-block uppercase tracking-widest font-bold">
+                    Resources</h4>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="media.html">Media</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="blog.html">Blog</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="careers.html">Careers</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="contacts.html">Contacts</a></li>
                 </ul>
             </div>
             <!-- Services-->

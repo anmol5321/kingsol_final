@@ -33,7 +33,8 @@
                                 "outline-variant": "#bfc7d1",
                                 "primary-container": "#60B0E9",
                                 "surface-container-low": "#F8FBFF",
-                                "surface-container-lowest": "#ffffff"
+                                "surface-container-lowest": "#ffffff",
+                                "orange-hover": "#F97316"
                             },
                             "backgroundImage": {
                                 "primary-gradient": "linear-gradient(135deg, #A7D4F3 0%, #60B0E9 100%)",
@@ -93,6 +94,53 @@
         .animate-marquee-infinite {
             animation: marquee 20s linear infinite;
         }
+
+        /* Sky blue buttons & links with orange hover — homepage only */
+        .btn-sky {
+            background-color: #60B0E9;
+            color: #ffffff;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-sky:hover {
+            background-color: #F97316;
+            border-color: #F97316;
+            color: #ffffff;
+        }
+
+        .btn-sky-outline {
+            border: 2px solid #60B0E9;
+            color: #60B0E9;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-sky-outline:hover {
+            background-color: #F97316;
+            border-color: #F97316;
+            color: #ffffff;
+        }
+
+        .link-sky {
+            color: #60B0E9;
+            transition: color 0.3s ease;
+        }
+
+        .link-sky:hover {
+            color: #F97316;
+        }
+
+        .icon-btn-sky {
+            background-color: #ffffff;
+            border: 1px solid #60B0E9;
+            color: #60B0E9;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .icon-btn-sky:hover {
+            background-color: #F97316;
+            border-color: #F97316;
+            color: #ffffff;
+        }
     </style>
 </head>
 
@@ -104,12 +152,12 @@
             <div class="">Visit Us Daily from 8.00 am to 7.00 pm</div>
             <div class="flex items-center gap-6">
                 <div class="flex gap-4">
-                    <a class="hover:text-primary transition-colors flex items-center gap-1" href="#"><span
+                    <a class="link-sky flex items-center gap-1" href="#"><span
                             class="material-symbols-outlined text-[16px]">share</span> Facebook</a>
-                    <a class="hover:text-primary transition-colors flex items-center gap-1"
-                        href="mailto:Kingsol@site.com"><span class="material-symbols-outlined text-[16px]">mail</span>
+                    <a class="link-sky flex items-center gap-1" href="mailto:Kingsol@site.com"><span
+                            class="material-symbols-outlined text-[16px]">mail</span>
                         Kingsol@site.com</a>
-                    <a class="hover:text-primary transition-colors flex items-center gap-1" href="#"><span
+                    <a class="link-sky flex items-center gap-1" href="#"><span
                             class="material-symbols-outlined text-[16px]">location_on</span> Chatham, NJ</a>
                 </div>
             </div>
@@ -148,7 +196,7 @@
                     </a>
                     <!-- Dropdown Menu -->
                     <div
-                        class="absolute left-0 top-full mt-1 hidden group-hover:grid grid-cols-2 gap-6 bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[380px] whitespace-normal">
+                        class="absolute left-0 top-full mt-1 hidden group-hover:grid grid-cols-2 gap-6 bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[380px] whitespace-normal before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3">
                         <div>
                             <h4 class="font-bold text-xs uppercase tracking-wider text-primary mb-3">Solar Panels</h4>
                             <ul class="space-y-2 text-xs font-semibold text-on-surface-variant">
@@ -172,11 +220,7 @@
                                 <li><a class="hover:text-primary transition-colors block py-0.5"
                                         href="sungrow.html">Sungrow</a></li>
                             </ul>
-                            <h4 class="font-bold text-xs uppercase tracking-wider text-primary mb-3">BOS</h4>
-                            <ul class="space-y-2 text-xs font-semibold text-on-surface-variant">
-                                <li><a class="hover:text-primary transition-colors block py-0.5"
-                                        href="bos.html">Accessories</a></li>
-                            </ul>
+
                         </div>
                     </div>
                 </div>
@@ -188,7 +232,7 @@
                     </a>
                     <!-- Dropdown Menu -->
                     <div
-                        class="absolute left-0 top-full mt-1 hidden group-hover:block bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[280px] whitespace-normal">
+                        class="absolute left-0 top-full mt-1 hidden group-hover:block bg-white border border-outline-variant/30 shadow-xl rounded-xl p-6 z-50 min-w-[280px] whitespace-normal before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3">
                         <ul class="space-y-3 text-xs font-semibold text-on-surface-variant">
                             <li><a class="hover:text-primary transition-colors block py-0.5"
                                     href="service-consulting.html">Solar Consulting</a></li>
@@ -235,13 +279,12 @@
                     <span class="gradient-text brightness-125">Resources</span>
                 </h1>
                 <div class="flex flex-wrap gap-5">
-                    <a class="btn-transition bg-primary-gradient hover:opacity-90 text-white font-label-caps text-label-caps py-5 px-12 flex items-center group shadow-xl"
+                    <a class="btn-sky btn-transition font-label-caps text-label-caps py-5 px-12 flex items-center group shadow-xl"
                         href="#consultation">
                         CONTACT US <span
                             class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
                     </a>
-                    <a class="btn-transition border-2 border-white/40 hover:border-white text-white font-label-caps text-label-caps py-5 px-12"
-                        href="company.html">
+                    <a class="btn-sky btn-transition font-label-caps text-label-caps py-5 px-12" href="company.html">
                         ABOUT COMPANY
                     </a>
                 </div>
@@ -268,8 +311,7 @@
         <div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div class="relative">
                 <div class="relative z-10 shadow-2xl">
-                    <img alt="Builders of Future" class="w-full h-auto"
-                        src="https://picsum.photos/id/381/800/600">
+                    <img alt="Builders of Future" class="w-full h-auto" src="https://picsum.photos/id/381/800/600">
                 </div>
                 <div
                     class="absolute -top-16 -left-16 text-[220px] font-bold text-slate-dark/5 opacity-40 select-none leading-none z-0">
@@ -289,11 +331,12 @@
                         sustainable innovation.</p>
                 </div>
                 <div class="flex flex-wrap items-center gap-10">
-                    <a class="btn-transition bg-slate-dark text-white hover:bg-primary-gradient font-label-caps text-label-caps py-4 px-10 font-bold shadow-md"
+                    <a class="btn-sky btn-transition font-label-caps text-label-caps py-4 px-10 font-bold shadow-md"
                         href="company.html">ABOUT COMPANY</a>
                     <a class="flex items-center gap-4 group" href="#">
                         <span
-                            class="w-14 h-14 rounded-full border-2 border-primary flex items-center justify-center text-primary group-hover:bg-primary-gradient group-hover:text-white group-hover:border-transparent transition-all duration-400">
+                            class="w-14 h-14 rounded-full border-2 border-primary flex items-center justify-center text-primary group-hover:bg-orange-hover group-hover:text-white group-hover:border-transparent transition-all duration-400"
+                            style="transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;">
                             <span class="material-symbols-outlined text-2xl"
                                 style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
                         </span>
@@ -375,8 +418,7 @@
     <!-- Benefits Section -->
     <section class="relative overflow-hidden text-white flex flex-col lg:flex-row p-0">
         <div class="relative lg:w-1/2 h-80 lg:h-auto overflow-hidden"><img alt="Wind Turbines"
-                class="w-full h-full object-cover"
-                src="https://picsum.photos/id/391/800/600">
+                class="w-full h-full object-cover" src="https://picsum.photos/id/391/800/600">
             <div class="absolute inset-0 bg-slate-dark/20"></div>
         </div>
         <div class="lg:w-1/2 flex items-center py-24 px-12 md:px-24"
@@ -458,12 +500,15 @@
                         How Solar Energy is Changing the World</h3>
                     <p class="text-on-surface-variant mb-8 line-clamp-3">The advancement in technology has made it
                         possible for scientists to come up with innovative solutions.</p>
-                    <a class="inline-flex items-center gap-2 group/link" href="projects.html">
-                        <span
-                            class="text-primary font-bold font-label-caps text-label-caps transition-colors duration-400">LEARN
+                    <a class="inline-flex items-center gap-2 group/link link-sky font-bold font-label-caps text-label-caps"
+                        href="projects.html">
+                        <span class="transition-colors duration-400">LEARN
                             MORE</span>
                         <span
-                            class="w-8 h-8 rounded-full bg-primary-gradient text-white flex items-center justify-center transition-all duration-400 group-hover/link:opacity-90 group-hover/link:translate-x-1">
+                            class="w-8 h-8 rounded-full text-white flex items-center justify-center transition-all duration-400 group-hover/link:translate-x-1"
+                            style="background-color:#60B0E9; transition: background-color 0.3s ease, transform 0.3s ease;"
+                            onmouseover="this.style.backgroundColor='#F97316'"
+                            onmouseout="this.style.backgroundColor='#60B0E9'">
                             <span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
                         </span>
                     </a>
@@ -488,12 +533,15 @@
                         Solar Wind Power Technology</h3>
                     <p class="text-on-surface-variant mb-8 line-clamp-3">Combining the reliability of solar panels with
                         the constant generation of wind turbines creates a hybrid system.</p>
-                    <a class="inline-flex items-center gap-2 group/link" href="projects.html">
-                        <span
-                            class="text-primary font-bold font-label-caps text-label-caps transition-colors duration-400">LEARN
+                    <a class="inline-flex items-center gap-2 group/link link-sky font-bold font-label-caps text-label-caps"
+                        href="projects.html">
+                        <span class="transition-colors duration-400">LEARN
                             MORE</span>
                         <span
-                            class="w-8 h-8 rounded-full bg-primary-gradient text-white flex items-center justify-center transition-all duration-400 group-hover/link:opacity-90 group-hover/link:translate-x-1">
+                            class="w-8 h-8 rounded-full text-white flex items-center justify-center transition-all duration-400 group-hover/link:translate-x-1"
+                            style="background-color:#60B0E9; transition: background-color 0.3s ease, transform 0.3s ease;"
+                            onmouseover="this.style.backgroundColor='#F97316'"
+                            onmouseout="this.style.backgroundColor='#60B0E9'">
                             <span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
                         </span>
                     </a>
@@ -503,27 +551,31 @@
     </section>
 
     <!-- Stats Counter Section -->
-    <section class="py-24 bg-white border-y border-outline-variant/10">
+    <section id="stats-section" class="py-24 bg-white border-y border-outline-variant/10">
         <div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
             <div class="flex flex-col items-center">
                 <span class="material-symbols-outlined gradient-text text-4xl mb-6">calendar_today</span>
-                <div class="text-5xl font-bold text-slate-dark mb-2">30+</div>
+                <div class="text-5xl font-bold text-slate-dark mb-2 counter-number" data-target="30" data-suffix="+">0
+                </div>
                 <div class="text-[11px] text-on-surface-variant uppercase font-bold tracking-widest">Years of Experience
                 </div>
             </div>
             <div class="flex flex-col items-center">
                 <span class="material-symbols-outlined gradient-text text-4xl mb-6">favorite</span>
-                <div class="text-5xl font-bold text-slate-dark mb-2">589</div>
+                <div class="text-5xl font-bold text-slate-dark mb-2 counter-number" data-target="589" data-suffix="">0
+                </div>
                 <div class="text-[11px] text-on-surface-variant uppercase font-bold tracking-widest">Happy Clients</div>
             </div>
             <div class="flex flex-col items-center">
                 <span class="material-symbols-outlined gradient-text text-4xl mb-6">task_alt</span>
-                <div class="text-5xl font-bold text-slate-dark mb-2">256</div>
+                <div class="text-5xl font-bold text-slate-dark mb-2 counter-number" data-target="256" data-suffix="">0
+                </div>
                 <div class="text-[11px] text-on-surface-variant uppercase font-bold tracking-widest">Projects Done</div>
             </div>
             <div class="flex flex-col items-center">
                 <span class="material-symbols-outlined gradient-text text-4xl mb-6">handshake</span>
-                <div class="text-5xl font-bold text-slate-dark mb-2">47+</div>
+                <div class="text-5xl font-bold text-slate-dark mb-2 counter-number" data-target="47" data-suffix="+">0
+                </div>
                 <div class="text-[11px] text-on-surface-variant uppercase font-bold tracking-widest">Business Partners
                 </div>
             </div>
@@ -562,7 +614,7 @@
     </section>
 
     <!-- Team Section -->
-    <section class="py-section-gap-desktop bg-white">
+    <!-- <section class="py-section-gap-desktop bg-white">
         <div class="max-w-7xl mx-auto px-grid-gutter flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
             <div class="max-w-2xl">
                 <span class="font-label-caps text-label-caps gradient-text tracking-[0.3em] block mb-5 uppercase">Who We
@@ -570,96 +622,94 @@
                 <h2 class="font-headline-lg text-5xl text-slate-dark">Meet Our <span class="gradient-text">Team</span>
                 </h2>
             </div>
-            <a class="btn-transition border-2 border-outline-variant px-12 py-4 font-label-caps text-label-caps text-slate-dark hover:bg-primary-gradient hover:text-white hover:border-transparent font-bold tracking-widest shadow-sm"
+            <a class="btn-sky btn-transition px-12 py-4 font-label-caps text-label-caps font-bold tracking-widest shadow-sm"
                 href="team.html">VIEW TEAM</a>
         </div>
         <div class="w-full overflow-hidden relative py-4">
-            <!-- Fade gradients on left and right edges for a premium look -->
-            <div
-                class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none">
-            </div>
-            <div
-                class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none">
-            </div>
+             Fade gradients on left and right edges for a premium look 
+    <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none">
+    </div>
+    <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none">
+    </div>
 
-            <div class="flex animate-marquee-infinite gap-10 pr-10">
-                <!-- Team Member 1 -->
-                <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
-                    <div
-                        class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
-                        <img alt="Peter Spencer"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                            src="https://picsum.photos/id/384/800/600">
-                    </div>
-                    <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Peter Spencer</h4>
-                    <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">President of
-                        Operations</p>
-                </div>
-                <!-- Team Member 2 -->
-                <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
-                    <div
-                        class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
-                        <img alt="Gabe Giordano"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                            src="https://picsum.photos/id/385/800/600">
-                    </div>
-                    <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Gabe Giordano</h4>
-                    <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">Project Manager
-                    </p>
-                </div>
-                <!-- Team Member 3 -->
-                <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
-                    <div
-                        class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
-                        <img alt="Byron Frisch"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                            src="https://picsum.photos/id/386/800/600">
-                    </div>
-                    <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Byron Frisch</h4>
-                    <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">Owner of Company
-                    </p>
-                </div>
-
-                <!-- Duplicate Set for Seamless Continuous Sliding -->
-                <!-- Team Member 1 -->
-                <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
-                    <div
-                        class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
-                        <img alt="Peter Spencer"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                            src="https://picsum.photos/id/387/800/600">
-                    </div>
-                    <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Peter Spencer</h4>
-                    <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">President of
-                        Operations</p>
-                </div>
-                <!-- Team Member 2 -->
-                <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
-                    <div
-                        class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
-                        <img alt="Gabe Giordano"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                            src="https://picsum.photos/id/388/800/600">
-                    </div>
-                    <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Gabe Giordano</h4>
-                    <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">Project Manager
-                    </p>
-                </div>
-                <!-- Team Member 3 -->
-                <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
-                    <div
-                        class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
-                        <img alt="Byron Frisch"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                            src="https://picsum.photos/id/389/800/600">
-                    </div>
-                    <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Byron Frisch</h4>
-                    <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">Owner of Company
-                    </p>
-                </div>
+    <div class="flex animate-marquee-infinite gap-10 pr-10">
+      Team Member 1 
+        <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
+            <div
+                class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
+                <img alt="Peter Spencer"
+                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    src="https://picsum.photos/id/384/800/600">
             </div>
+            <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Peter Spencer</h4>
+            <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">President of
+                Operations</p>
         </div>
-    </section>
+        Team Member 2 
+        <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
+            <div
+                class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
+                <img alt="Gabe Giordano"
+                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    src="https://picsum.photos/id/385/800/600">
+            </div>
+            <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Gabe Giordano</h4>
+            <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">Project Manager
+            </p>
+        </div>
+         Team Member 3 
+        <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
+            <div
+                class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
+                <img alt="Byron Frisch"
+                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    src="https://picsum.photos/id/386/800/600">
+            </div>
+            <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Byron Frisch</h4>
+            <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">Owner of Company
+            </p>
+        </div>
+
+        Duplicate Set for Seamless Continuous Sliding 
+        Team Member 1 
+        <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
+            <div
+                class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
+                <img alt="Peter Spencer"
+                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    src="https://picsum.photos/id/387/800/600">
+            </div>
+            <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Peter Spencer</h4>
+            <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">President of
+                Operations</p>
+        </div>
+         Team Member 2 
+        <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
+            <div
+                class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
+                <img alt="Gabe Giordano"
+                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    src="https://picsum.photos/id/388/800/600">
+            </div>
+            <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Gabe Giordano</h4>
+            <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">Project Manager
+            </p>
+        </div>
+       Team Member 3 
+        <div class="text-center group card-hover p-4 w-[280px] md:w-[350px] shrink-0">
+            <div
+                class="relative overflow-hidden mb-8 aspect-[4/5] shadow-lg border-b-4 border-transparent group-hover:border-primary">
+                <img alt="Byron Frisch"
+                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    src="https://picsum.photos/id/389/800/600">
+            </div>
+            <h4 class="font-headline-md text-2xl text-slate-dark mb-2">Byron Frisch</h4>
+            <p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-bold">Owner of Company
+            </p>
+        </div>
+    </div>
+    </div>
+    </section> -->
 
     <!-- Continuous Product Slider Section -->
     <section class="py-12 bg-surface-container-low border-t border-b border-outline-variant/20 overflow-hidden">
@@ -677,6 +727,11 @@
             .animate-marquee-products {
                 animation: marquee-products 30s linear infinite;
             }
+
+            /* Pause slider on hover */
+            .product-slider-track:hover .animate-marquee-products {
+                animation-play-state: paused;
+            }
         </style>
         <div
             class="max-w-7xl mx-auto px-grid-gutter mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
@@ -685,286 +740,306 @@
                     Catalogue</span>
                 <h2 class="font-headline-lg text-3xl md:text-4xl text-slate-dark font-bold">Featured Solar Products</h2>
             </div>
-            <a class="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-slate-dark transition-colors duration-300 font-label-caps text-label-caps"
+            <a class="link-sky inline-flex items-center gap-1 text-sm font-bold transition-colors duration-300 font-label-caps text-label-caps"
                 href="products.html">
                 VIEW ALL PRODUCTS <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
             </a>
         </div>
-        <div class="w-full overflow-hidden relative">
-            <!-- Fade gradients on edges -->
-            <div
-                class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface-container-low to-transparent z-10 pointer-events-none">
-            </div>
-            <div
-                class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface-container-low to-transparent z-10 pointer-events-none">
-            </div>
-
-            <div class="flex animate-marquee-products gap-8 pr-8">
-                <!-- Product Card 1: SWELECT Solar Panel -->
+        <div class="product-slider-track max-w-7xl mx-auto px-grid-gutter relative">
+            <div class="overflow-hidden relative">
+                <!-- Fade gradients on edges -->
                 <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="SWELECT Panel" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/369/800/600">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">SWELECT</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">SWELECT HH Series</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">High-efficiency half-cut mono PV
-                            modules, engineered for durability and high power output under extreme conditions.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="swelect.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface-container-low to-transparent z-10 pointer-events-none">
                 </div>
-                <!-- Product Card 2: Solis Inverter -->
                 <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Solis Inverter" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/370/800/600">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
-                            <span class="text-xs font-bold text-primary">SOLIS</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Solis Grid-Tied Inverter
-                        </h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Triple-MPPT utility inverters
-                            designed for commercial rooftop systems with over 98.7% peak efficiency rating.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="solis.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 3: Jinko Solar -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Jinko Solar Panel" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/371/800/600">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">JINKO SOLAR</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Jinko Tiger Neo N-type</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Leading-edge N-type technology
-                            with outstanding low-light performance and bifacial power generation potential.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="jinko.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 4: Sungrow Inverter -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Sungrow Inverter" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/372/800/600">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
-                            <span class="text-xs font-bold text-primary">SUNGROW</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Sungrow Multi-MPPT Inverter
-                        </h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Multi-MPPT string inverter
-                            featuring safe and smart management with built-in DC reverse polarity protection.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="sungrow.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 5: Saatvik Green Panel -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Saatvik Green Energy" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/373/800/600">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">SAATVIK</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Saatvik Mono PERC Panel</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Premium Tier-1 mono PERC PV
-                            modules designed to maximize solar power extraction with robust multi-busbar designs.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="saatvik.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 6: Vikram Solar Panel -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Vikram Solar Panel" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/374/800/600">
-                        </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">VIKRAM SOLAR</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Vikram Somera Half-Cell</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Somera Series high-performance
-                            144-cell monocrystalline module, delivering superior performance under shaded areas.</p>
-                    </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="vikram.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface-container-low to-transparent z-10 pointer-events-none">
                 </div>
 
-                <!-- Duplicate Set for Seamless Continuous Sliding -->
-                <!-- Product Card 1: SWELECT Solar Panel -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="SWELECT Panel" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/375/800/600">
+                <div class="flex animate-marquee-products gap-8 pr-8">
+                    <!-- Product Card 1: SWELECT Solar Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="SWELECT Panel" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/369/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">SWELECT</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">SWELECT HH Series</h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">High-efficiency half-cut
+                                mono PV
+                                modules, engineered for durability and high power output under extreme conditions.</p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">SWELECT</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">SWELECT HH Series</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">High-efficiency half-cut mono PV
-                            modules, engineered for durability and high power output under extreme conditions.</p>
+                        <a class="link-sky inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
+                            href="swelect.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="swelect.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 2: Solis Inverter -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Solis Inverter" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/376/800/600">
+                    <!-- Product Card 2: Solis Inverter -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Solis Inverter" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/370/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
+                                <span class="text-xs font-bold text-primary">SOLIS</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Solis Grid-Tied Inverter
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Triple-MPPT utility
+                                inverters
+                                designed for commercial rooftop systems with over 98.7% peak efficiency rating.</p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
-                            <span class="text-xs font-bold text-primary">SOLIS</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Solis Grid-Tied Inverter
-                        </h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Triple-MPPT utility inverters
-                            designed for commercial rooftop systems with over 98.7% peak efficiency rating.</p>
+                        <a class="link-sky inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
+                            href="solis.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="solis.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 3: Jinko Solar -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Jinko Solar Panel" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/377/800/600">
+                    <!-- Product Card 3: Jinko Solar -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Jinko Solar Panel" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/371/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">JINKO SOLAR</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Jinko Tiger Neo N-type
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Leading-edge N-type
+                                technology
+                                with outstanding low-light performance and bifacial power generation potential.</p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">JINKO SOLAR</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Jinko Tiger Neo N-type</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Leading-edge N-type technology
-                            with outstanding low-light performance and bifacial power generation potential.</p>
+                        <a class="link-sky inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
+                            href="jinko.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="jinko.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 4: Sungrow Inverter -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Sungrow Inverter" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/378/800/600">
+                    <!-- Product Card 4: Sungrow Inverter -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Sungrow Inverter" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/372/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
+                                <span class="text-xs font-bold text-primary">SUNGROW</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Sungrow Multi-MPPT
+                                Inverter
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Multi-MPPT string inverter
+                                featuring safe and smart management with built-in DC reverse polarity protection.</p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
-                            <span class="text-xs font-bold text-primary">SUNGROW</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Sungrow Multi-MPPT Inverter
-                        </h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Multi-MPPT string inverter
-                            featuring safe and smart management with built-in DC reverse polarity protection.</p>
+                        <a class="link-sky inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
+                            href="sungrow.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="sungrow.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 5: Saatvik Green Panel -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Saatvik Green Energy" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/379/800/600">
+                    <!-- Product Card 5: Saatvik Green Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Saatvik Green Energy" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/373/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">SAATVIK</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Saatvik Mono PERC Panel
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Premium Tier-1 mono PERC PV
+                                modules designed to maximize solar power extraction with robust multi-busbar designs.
+                            </p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">SAATVIK</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Saatvik Mono PERC Panel</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Premium Tier-1 mono PERC PV
-                            modules designed to maximize solar power extraction with robust multi-busbar designs.</p>
+                        <a class="link-sky inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
+                            href="saatvik.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="saatvik.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
-                </div>
-                <!-- Product Card 6: Vikram Solar Panel -->
-                <div
-                    class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <div>
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
-                            <img alt="Vikram Solar Panel" class="w-full h-full object-cover"
-                                src="https://picsum.photos/id/380/800/600">
+                    <!-- Product Card 6: Vikram Solar Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Vikram Solar Panel" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/374/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">VIKRAM SOLAR</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Vikram Somera Half-Cell
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Somera Series
+                                high-performance
+                                144-cell monocrystalline module, delivering superior performance under shaded areas.</p>
                         </div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span
-                                class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
-                                Module</span>
-                            <span class="text-xs font-bold text-primary">VIKRAM SOLAR</span>
-                        </div>
-                        <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Vikram Somera Half-Cell</h4>
-                        <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Somera Series high-performance
-                            144-cell monocrystalline module, delivering superior performance under shaded areas.</p>
+                        <a class="link-sky inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
+                            href="vikram.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
                     </div>
-                    <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
-                        href="vikram.html">EXPLORE PRODUCT <span
-                            class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+
+                    <!-- Duplicate Set for Seamless Continuous Sliding -->
+                    <!-- Product Card 1: SWELECT Solar Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="SWELECT Panel" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/375/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">SWELECT</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">SWELECT HH Series</h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">High-efficiency half-cut
+                                mono PV
+                                modules, engineered for durability and high power output under extreme conditions.</p>
+                        </div>
+                        <a class="link-sky inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
+                            href="swelect.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
+                    <!-- Product Card 2: Solis Inverter -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Solis Inverter" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/376/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
+                                <span class="text-xs font-bold text-primary">SOLIS</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Solis Grid-Tied Inverter
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Triple-MPPT utility
+                                inverters
+                                designed for commercial rooftop systems with over 98.7% peak efficiency rating.</p>
+                        </div>
+                        <a class="link-sky inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
+                            href="solis.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
+                    <!-- Product Card 3: Jinko Solar -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Jinko Solar Panel" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/377/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">JINKO SOLAR</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Jinko Tiger Neo N-type
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Leading-edge N-type
+                                technology
+                                with outstanding low-light performance and bifacial power generation potential.</p>
+                        </div>
+                        <a class="link-sky inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
+                            href="jinko.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
+                    <!-- Product Card 4: Sungrow Inverter -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Sungrow Inverter" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/378/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Inverter</span>
+                                <span class="text-xs font-bold text-primary">SUNGROW</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Sungrow Multi-MPPT
+                                Inverter
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Multi-MPPT string inverter
+                                featuring safe and smart management with built-in DC reverse polarity protection.</p>
+                        </div>
+                        <a class="link-sky inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
+                            href="sungrow.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
+                    <!-- Product Card 5: Saatvik Green Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Saatvik Green Energy" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/379/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">SAATVIK</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Saatvik Mono PERC Panel
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Premium Tier-1 mono PERC PV
+                                modules designed to maximize solar power extraction with robust multi-busbar designs.
+                            </p>
+                        </div>
+                        <a class="link-sky inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
+                            href="saatvik.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
+                    <!-- Product Card 6: Vikram Solar Panel -->
+                    <div
+                        class="bg-white rounded-2xl border border-outline-variant/35 p-6 w-[300px] md:w-[340px] shrink-0 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-surface-bright">
+                                <img alt="Vikram Solar Panel" class="w-full h-full object-cover"
+                                    src="https://picsum.photos/id/380/800/600">
+                            </div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span
+                                    class="bg-primary-light/20 text-slate-dark text-[10px] font-bold px-2.5 py-1 tracking-wider uppercase rounded-md">Solar
+                                    Module</span>
+                                <span class="text-xs font-bold text-primary">VIKRAM SOLAR</span>
+                            </div>
+                            <h4 class="font-headline-md text-lg text-slate-dark mb-2 font-bold">Vikram Somera Half-Cell
+                            </h4>
+                            <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Somera Series
+                                high-performance
+                                144-cell monocrystalline module, delivering superior performance under shaded areas.</p>
+                        </div>
+                        <a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-slate-dark transition-colors"
+                            href="vikram.html">EXPLORE PRODUCT <span
+                                class="material-symbols-outlined text-[14px]">arrow_right_alt</span></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1050,19 +1125,22 @@
                     <span class="text-sm text-white">I'm not a robot</span>
                 </div>
                 <button
-                    class="btn-transition bg-white text-primary border-2 border-white hover:bg-transparent hover:text-white font-bold font-label-caps text-label-caps py-5 px-14 flex items-center group shadow-lg"
-                    type="submit">
+                    class="btn-transition font-bold font-label-caps text-label-caps py-5 px-14 flex items-center group shadow-lg"
+                    style="background-color:#60B0E9; color:#ffffff; border: 2px solid #60B0E9; transition: background-color 0.3s ease, border-color 0.3s ease;"
+                    onmouseover="this.style.backgroundColor='#F97316'; this.style.borderColor='#F97316';"
+                    onmouseout="this.style.backgroundColor='#60B0E9'; this.style.borderColor='#60B0E9';" type="submit">
                     SEND REQUEST <span
                         class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">send</span>
                 </button>
             </form>
         </div>
         <!-- Contact Pane -->
-        <div class="w-full lg:w-1/2 relative flex items-center justify-center p-12 md:p-24 overflow-hidden"
+        <div class="w-full lg:w-1/2 relative flex items-center justify-center overflow-hidden"
             style="background-color:#f0f6fc;">
             <div class="absolute inset-0 z-0"
-                style="background-image:url('image.png/india-warehouse-map.png'); background-size:contain; background-repeat:no-repeat; background-position:center; opacity:0.35;">
+                style="background-image:url('image.png/india-warehouse-map.png'); background-size:contain; background-repeat:no-repeat; background-position:center; opacity:0.55;">
             </div>
+            <!--
             <div class="relative z-10 text-center max-w-md">
                 <div
                     class="w-24 h-24 bg-slate-dark shadow-2xl flex items-center justify-center text-white mx-auto mb-12 rounded-xl">
@@ -1074,37 +1152,46 @@
                 <h2 class="font-headline-lg text-4xl text-slate-dark mb-8">Call Us <span
                         class="gradient-text font-bold">Toll Free</span></h2>
                 <div class="text-[64px] font-bold gradient-text tracking-tighter leading-none mb-12">800.567.1234</div>
-                <!-- Floating Contact Widgets -->
                 <div class="flex justify-center gap-6">
-                    <a class="btn-transition w-14 h-14 bg-white border border-outline-variant/30 flex items-center justify-center text-primary rounded-lg hover:bg-primary-gradient hover:text-white shadow-sm"
+                    <a class="icon-btn-sky btn-transition w-14 h-14 flex items-center justify-center rounded-lg shadow-sm"
                         href="mailto:Kingsol@site.com">
                         <span class="material-symbols-outlined text-2xl">mail</span>
                     </a>
-                    <a class="btn-transition w-14 h-14 bg-white border border-outline-variant/30 flex items-center justify-center text-primary rounded-lg hover:bg-primary-gradient hover:text-white shadow-sm"
+                    <a class="icon-btn-sky btn-transition w-14 h-14 flex items-center justify-center rounded-lg shadow-sm"
                         href="contacts.html">
                         <span class="material-symbols-outlined text-2xl">chat</span>
                     </a>
                 </div>
             </div>
+            -->
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-slate-dark pt-24 pb-12 text-white/70">
-        <div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+        <div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-20">
             <!-- Brand -->
             <div class="space-y-8">
                 <a class="flex items-center gap-2" href="index.html">
-                    <img src="image.png/logo.png" alt="Kingsol Logo" class="h-16 w-auto">
+                    <img src="image.png/logo.png" alt="Kingsol Logo" class="h-24 w-auto">
                 </a>
                 <p class="text-sm leading-relaxed">Leading the way in renewable energy with innovative solar and wind
                     solutions for modern enterprises and homes.</p>
                 <div class="flex gap-4">
-                    <a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-primary-gradient hover:border-transparent transition-all text-[10px] font-bold"
+                    <a class="w-10 h-10 border border-white/10 flex items-center justify-center transition-all text-[10px] font-bold"
+                        style="color:#60B0E9;"
+                        onmouseover="this.style.backgroundColor='#F97316'; this.style.borderColor='#F97316'; this.style.color='#ffffff';"
+                        onmouseout="this.style.backgroundColor=''; this.style.borderColor=''; this.style.color='#60B0E9';"
                         href="#">FB</a>
-                    <a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-primary-gradient hover:border-transparent transition-all text-[10px] font-bold"
+                    <a class="w-10 h-10 border border-white/10 flex items-center justify-center transition-all text-[10px] font-bold"
+                        style="color:#60B0E9;"
+                        onmouseover="this.style.backgroundColor='#F97316'; this.style.borderColor='#F97316'; this.style.color='#ffffff';"
+                        onmouseout="this.style.backgroundColor=''; this.style.borderColor=''; this.style.color='#60B0E9';"
                         href="#">TW</a>
-                    <a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-primary-gradient hover:border-transparent transition-all text-[10px] font-bold"
+                    <a class="w-10 h-10 border border-white/10 flex items-center justify-center transition-all text-[10px] font-bold"
+                        style="color:#60B0E9;"
+                        onmouseover="this.style.backgroundColor='#F97316'; this.style.borderColor='#F97316'; this.style.color='#ffffff';"
+                        onmouseout="this.style.backgroundColor=''; this.style.borderColor=''; this.style.color='#60B0E9';"
                         href="#">IG</a>
                 </div>
             </div>
@@ -1114,26 +1201,23 @@
                     class="font-label-caps text-label-caps text-white mb-10 border-b border-primary/40 pb-4 inline-block uppercase tracking-widest font-bold">
                     Quick Links</h4>
                 <ul class="space-y-4 text-sm font-medium">
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="index.html">Home</a>
-                    </li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="about.html">About
-                            Us</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="products.html">Products</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="company.html">Company</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="projects.html">Projects</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="team.html">Team</a>
-                    </li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="media.html">Media</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="blog.html">Blog</a>
-                    </li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="careers.html">Careers</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400"
-                            href="contacts.html">Contacts</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="index.html">Home</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="about.html">About Us</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="products.html">Products</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="company.html">Company</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="projects.html">Projects</a></li>
+                </ul>
+            </div>
+            <!-- Resources -->
+            <div class="">
+                <h4
+                    class="font-label-caps text-label-caps text-white mb-10 border-b border-primary/40 pb-4 inline-block uppercase tracking-widest font-bold">
+                    Resources</h4>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="media.html">Media</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="blog.html">Blog</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="careers.html">Careers</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="contacts.html">Contacts</a></li>
                 </ul>
             </div>
             <!-- Services-->
@@ -1174,6 +1258,65 @@
             © 2026 Kingsol. All Rights Reserved.
         </div>
     </footer>
+    <!-- Stats Counter Animation -->
+    <script>
+        (function () {
+            var hasRun = false;
+
+            function easeOutQuart(t) {
+                return 1 - Math.pow(1 - t, 4);
+            }
+
+            function animateCounter(el) {
+                var target = parseInt(el.getAttribute('data-target'), 10);
+                var suffix = el.getAttribute('data-suffix') || '';
+                var duration = 2000; // ms
+                var startTime = null;
+
+                function step(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var elapsed = timestamp - startTime;
+                    var progress = Math.min(elapsed / duration, 1);
+                    var eased = easeOutQuart(progress);
+                    var current = Math.round(eased * target);
+                    el.textContent = current + suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        el.textContent = target + suffix;
+                    }
+                }
+
+                requestAnimationFrame(step);
+            }
+
+            function startCounters() {
+                if (hasRun) return;
+                hasRun = true;
+                document.querySelectorAll('.counter-number').forEach(function (el) {
+                    animateCounter(el);
+                });
+            }
+
+            var section = document.getElementById('stats-section');
+            if (!section) return;
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            startCounters();
+                            observer.disconnect();
+                        }
+                    });
+                }, { threshold: 0.3 });
+                observer.observe(section);
+            } else {
+                // Fallback for older browsers
+                startCounters();
+            }
+        })();
+    </script>
 </body>
 
 </html>
