@@ -6,7 +6,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Leading provider of solar and wind energy solutions for a sustainable future." name="description">
     <title>Kingsol - Leading Solar & Wind Energy Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
         rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
@@ -22,13 +23,13 @@
                                 "primary": "#60B0E9",
                                 "primary-light": "#A7D4F3",
                                 "secondary": "#ABD660",
-                                "slate-dark": "#2B3152",
+                                "slate-dark": "#0F172A",
                                 "surface-bright": "#F8FBFF",
                                 "error": "#ba1a1a",
                                 "on-primary": "#ffffff",
-                                "on-background": "#2B3152",
-                                "on-surface": "#2B3152",
-                                "on-surface-variant": "#777B93",
+                                "on-background": "#0F172A",
+                                "on-surface": "#0F172A",
+                                "on-surface-variant": "#334155",
                                 "background": "#ffffff",
                                 "outline-variant": "#bfc7d1",
                                 "primary-container": "#60B0E9",
@@ -306,6 +307,233 @@
         </div>
     </div>
 
+    <!-- Brand Partners Marquee Section (Above About Section) -->
+    <section class="py-12 bg-surface-container-low border-b border-outline-variant/20 overflow-hidden">
+        <style>
+            @keyframes brandMarquee {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .animate-brand-marquee {
+                animation: brandMarquee 30s linear infinite;
+            }
+
+            .brand-marquee-container:hover .animate-brand-marquee {
+                animation-play-state: paused;
+            }
+
+            .brand-logo-item {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 72px;
+                padding: 12px 28px;
+                background-color: #ffffff;
+                border: 1px solid rgba(191, 199, 209, 0.4);
+                border-radius: 0.75rem;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                flex-shrink: 0;
+            }
+
+            .brand-logo-item:hover {
+                border-color: #60B0E9;
+                box-shadow: 0 10px 25px -5px rgba(96, 176, 233, 0.2), 0 8px 10px -6px rgba(96, 176, 233, 0.1);
+                transform: translateY(-2px);
+            }
+
+            .brand-logo-item svg {
+                height: 38px;
+                width: auto;
+                max-width: 190px;
+                object-fit: contain;
+            }
+        </style>
+
+        <div class="max-w-7xl mx-auto px-grid-gutter text-center mb-8">
+            <span
+                class="font-label-caps text-label-caps text-primary tracking-[0.3em] block mb-2 uppercase font-bold">Authorized
+                Brand Partners</span>
+            <h2 class="font-headline-lg text-2xl md:text-3xl text-slate-dark font-bold">World-Class Tier-1 Solar &
+                Inverter Manufacturers</h2>
+        </div>
+
+        <div class="brand-marquee-container relative w-full overflow-hidden">
+            <!-- Fade gradients on left and right edges for seamless look -->
+            <div
+                class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-surface-container-low to-transparent z-10 pointer-events-none">
+            </div>
+            <div
+                class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-surface-container-low to-transparent z-10 pointer-events-none">
+            </div>
+
+            <div class="flex animate-brand-marquee gap-6 md:gap-8 w-max">
+                <!-- First Set -->
+                <div class="flex items-center gap-6 md:gap-8 shrink-0">
+                    <a href="solis.html" class="brand-logo-item" title="View Solis Products">
+                        <svg viewBox="8 8 147 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="20" stroke="#F97316" stroke-width="4" stroke-dasharray="8 4">
+                            </circle>
+                            <circle cx="30" cy="30" r="12" fill="#F97316"></circle>
+                            <text x="65" y="39" font-family="'Sora', sans-serif" font-weight="700" font-size="28"
+                                fill="#0F172A">solis</text>
+                        </svg>
+                    </a>
+                    <a href="sungrow.html" class="brand-logo-item" title="View Sungrow Products">
+                        <svg viewBox="12 15 175 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 42 L25 18 L35 42 Z" fill="#1E40AF"></path>
+                            <path d="M30 42 L40 18 L50 42 Z" fill="#EF4444" opacity="0.8"></path>
+                            <circle cx="23" cy="25" r="5" fill="#EAB308"></circle>
+                            <text x="62" y="38" font-family="'Sora', sans-serif" font-weight="800" font-size="22"
+                                fill="#0F172A" letter-spacing="-0.5">SUNGROW</text>
+                        </svg>
+                    </a>
+                    <a href="swelect.html" class="brand-logo-item" title="View SWELECT Products">
+                        <svg viewBox="12 12 155 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="15" width="30" height="30" rx="4" fill="#3B82F6"></rect>
+                            <line x1="30" y1="15" x2="30" y2="45" stroke="#FFFFFF" stroke-width="2"></line>
+                            <line x1="15" y1="30" x2="45" y2="30" stroke="#FFFFFF" stroke-width="2"></line>
+                            <circle cx="30" cy="30" r="4" fill="#F97316"></circle>
+                            <text x="58" y="37" font-family="'Sora', sans-serif" font-weight="800" font-size="20"
+                                fill="#3B82F6" letter-spacing="1">SWELECT</text>
+                        </svg>
+                    </a>
+                    <a href="saatvik.html" class="brand-logo-item" title="View Saatvik Products">
+                        <svg viewBox="12 10 155 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 12 C40 12, 45 22, 38 35 C31 48, 15 45, 22 32 C29 19, 20 12, 30 12 Z"
+                                fill="#22C55E"></path>
+                            <circle cx="30" cy="28" r="8" fill="#EAB308"></circle>
+                            <text x="58" y="37" font-family="'Sora', sans-serif" font-weight="800" font-size="20"
+                                fill="#1E3A8A">SAATVIK</text>
+                        </svg>
+                    </a>
+                    <a href="vikram.html" class="brand-logo-item" title="View Vikram Products">
+                        <svg viewBox="10 10 155 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M30 12 L33 22 L43 20 L36 27 L45 34 L33 35 L36 45 L28 38 L20 45 L23 35 L11 34 L20 27 L13 20 L23 22 Z"
+                                fill="#F97316"></path>
+                            <text x="58" y="38" font-family="'Sora', sans-serif" font-weight="800" font-size="20"
+                                fill="#1E40AF" letter-spacing="0.5">VIKRAM</text>
+                        </svg>
+                    </a>
+                    <a href="jinko.html" class="brand-logo-item" title="View Jinko Products">
+                        <svg viewBox="10 12 120 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 38 C20 25, 32 25, 42 40" stroke="#EF4444" stroke-width="5"
+                                stroke-linecap="round"></path>
+                            <path d="M18 20 C25 32, 35 32, 42 18" stroke="#F97316" stroke-width="4"
+                                stroke-linecap="round"></path>
+                            <text x="54" y="38" font-family="'Sora', sans-serif" font-weight="800" font-size="22"
+                                fill="#1E3A8A">JinKo</text>
+                        </svg>
+                    </a>
+                    <a href="ja-solar.html" class="brand-logo-item" title="View JA Solar Products">
+                        <svg viewBox="10 10 165 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="18" fill="#DC2626"></circle>
+                            <path d="M22 30 L30 18 L38 30 L34 30 L30 24 L26 30 Z" fill="#FBBF24"></path>
+                            <circle cx="30" cy="32" r="3" fill="#FFFFFF"></circle>
+                            <text x="58" y="38" font-family="'Sora', sans-serif" font-weight="800" font-size="22"
+                                fill="#0F172A">JA SOLAR</text>
+                        </svg>
+                    </a>
+                    <a href="products.html" class="brand-logo-item" title="View All Products">
+                        <svg viewBox="10 10 225 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="18" stroke="#22C55E" stroke-width="3"></circle>
+                            <path d="M30 12 V48 M12 30 H48 M18 18 L42 42 M18 42 L42 18" stroke="#22C55E"
+                                stroke-width="1.5"></path>
+                            <circle cx="30" cy="30" r="8" fill="#E55B13"></circle>
+                            <text x="58" y="38" font-family="'Sora', sans-serif" font-weight="800" font-size="20"
+                                fill="#0F172A">en<tspan fill="#E55B13">Possibilities</tspan></text>
+                        </svg>
+                    </a>
+                </div>
+                <!-- Duplicated Set for Seamless Scroll -->
+                <div class="flex items-center gap-6 md:gap-8 shrink-0">
+                    <a href="solis.html" class="brand-logo-item" title="View Solis Products">
+                        <svg viewBox="8 8 147 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="20" stroke="#F97316" stroke-width="4" stroke-dasharray="8 4">
+                            </circle>
+                            <circle cx="30" cy="30" r="12" fill="#F97316"></circle>
+                            <text x="65" y="39" font-family="'Sora', sans-serif" font-weight="700" font-size="28"
+                                fill="#0F172A">solis</text>
+                        </svg>
+                    </a>
+                    <a href="sungrow.html" class="brand-logo-item" title="View Sungrow Products">
+                        <svg viewBox="12 15 175 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 42 L25 18 L35 42 Z" fill="#1E40AF"></path>
+                            <path d="M30 42 L40 18 L50 42 Z" fill="#EF4444" opacity="0.8"></path>
+                            <circle cx="23" cy="25" r="5" fill="#EAB308"></circle>
+                            <text x="62" y="38" font-family="'Sora', sans-serif" font-weight="800" font-size="22"
+                                fill="#0F172A" letter-spacing="-0.5">SUNGROW</text>
+                        </svg>
+                    </a>
+                    <a href="swelect.html" class="brand-logo-item" title="View SWELECT Products">
+                        <svg viewBox="12 12 155 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="15" width="30" height="30" rx="4" fill="#3B82F6"></rect>
+                            <line x1="30" y1="15" x2="30" y2="45" stroke="#FFFFFF" stroke-width="2"></line>
+                            <line x1="15" y1="30" x2="45" y2="30" stroke="#FFFFFF" stroke-width="2"></line>
+                            <circle cx="30" cy="30" r="4" fill="#F97316"></circle>
+                            <text x="58" y="37" font-family="'Sora', sans-serif" font-weight="800" font-size="20"
+                                fill="#3B82F6" letter-spacing="1">SWELECT</text>
+                        </svg>
+                    </a>
+                    <a href="saatvik.html" class="brand-logo-item" title="View Saatvik Products">
+                        <svg viewBox="12 10 155 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 12 C40 12, 45 22, 38 35 C31 48, 15 45, 22 32 C29 19, 20 12, 30 12 Z"
+                                fill="#22C55E"></path>
+                            <circle cx="30" cy="28" r="8" fill="#EAB308"></circle>
+                            <text x="58" y="37" font-family="'Sora', sans-serif" font-weight="800" font-size="20"
+                                fill="#1E3A8A">SAATVIK</text>
+                        </svg>
+                    </a>
+                    <a href="vikram.html" class="brand-logo-item" title="View Vikram Products">
+                        <svg viewBox="10 10 155 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M30 12 L33 22 L43 20 L36 27 L45 34 L33 35 L36 45 L28 38 L20 45 L23 35 L11 34 L20 27 L13 20 L23 22 Z"
+                                fill="#F97316"></path>
+                            <text x="58" y="38" font-family="'Sora', sans-serif" font-weight="800" font-size="20"
+                                fill="#1E40AF" letter-spacing="0.5">VIKRAM</text>
+                        </svg>
+                    </a>
+                    <a href="jinko.html" class="brand-logo-item" title="View Jinko Products">
+                        <svg viewBox="10 12 120 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 38 C20 25, 32 25, 42 40" stroke="#EF4444" stroke-width="5"
+                                stroke-linecap="round"></path>
+                            <path d="M18 20 C25 32, 35 32, 42 18" stroke="#F97316" stroke-width="4"
+                                stroke-linecap="round"></path>
+                            <text x="54" y="38" font-family="'Sora', sans-serif" font-weight="800" font-size="22"
+                                fill="#1E3A8A">JinKo</text>
+                        </svg>
+                    </a>
+                    <a href="ja-solar.html" class="brand-logo-item" title="View JA Solar Products">
+                        <svg viewBox="10 10 165 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="18" fill="#DC2626"></circle>
+                            <path d="M22 30 L30 18 L38 30 L34 30 L30 24 L26 30 Z" fill="#FBBF24"></path>
+                            <circle cx="30" cy="32" r="3" fill="#FFFFFF"></circle>
+                            <text x="58" y="38" font-family="'Sora', sans-serif" font-weight="800" font-size="22"
+                                fill="#0F172A">JA SOLAR</text>
+                        </svg>
+                    </a>
+                    <a href="products.html" class="brand-logo-item" title="View All Products">
+                        <svg viewBox="10 10 225 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="18" stroke="#22C55E" stroke-width="3"></circle>
+                            <path d="M30 12 V48 M12 30 H48 M18 18 L42 42 M18 42 L42 18" stroke="#22C55E"
+                                stroke-width="1.5"></path>
+                            <circle cx="30" cy="30" r="8" fill="#E55B13"></circle>
+                            <text x="58" y="38" font-family="'Sora', sans-serif" font-weight="800" font-size="20"
+                                fill="#0F172A">en<tspan fill="#E55B13">Possibilities</tspan></text>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="py-section-gap-desktop bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
@@ -348,6 +576,600 @@
             </div>
         </div>
     </section>
+
+    <!-- Brand Partners Marquee Section (3D Flip Cards Under About Section) -->
+    <section class="py-16 bg-surface-container-low border-b border-outline-variant/20 overflow-hidden">
+        <style>
+            @keyframes partnerMarquee {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .animate-partner-marquee {
+                animation: partnerMarquee 35s linear infinite;
+            }
+
+            .partner-marquee-container:hover .animate-partner-marquee {
+                animation-play-state: paused;
+            }
+
+            .partner-flip-card {
+                perspective: 1000px;
+                display: inline-block;
+                width: 320px;
+                height: 185px;
+                flex-shrink: 0;
+            }
+
+            .partner-flip-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                transform-style: preserve-3d;
+            }
+
+            .partner-flip-card:hover .partner-flip-card-inner {
+                transform: rotateY(180deg);
+            }
+
+            .partner-flip-card-front,
+            .partner-flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                border-radius: 1rem;
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .partner-flip-card-front {
+                background-color: #ffffff;
+                border: 1px solid rgba(191, 199, 209, 0.4);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+                align-items: center;
+                justify-content: center;
+            }
+
+            .partner-flip-card-back {
+                background: linear-gradient(135deg, #60B0E9 0%, #3B94DC 100%);
+                color: #ffffff;
+                border: 1px solid rgba(255, 255, 255, 0.45);
+                transform: rotateY(180deg);
+                text-align: left;
+                align-items: flex-start;
+                justify-content: space-between;
+                box-shadow: 0 14px 30px -5px rgba(96, 176, 233, 0.45);
+            }
+
+            .partner-flip-card-front svg {
+                max-height: 52px;
+                width: auto;
+                max-width: 220px;
+            }
+        </style>
+
+        <div class="max-w-7xl mx-auto px-grid-gutter text-center mb-10">
+            <span
+                class="font-label-caps text-label-caps text-primary tracking-[0.3em] block mb-2 uppercase font-bold">Our
+                Partner Brands</span>
+            <h2 class="font-headline-lg text-3xl md:text-4xl text-slate-dark font-bold mb-3">Authorized Solar Product
+                Partners</h2>
+            <p class="max-w-2xl mx-auto text-on-surface-variant font-body-md">We work closely with the world's most
+                trusted solar manufacturers to bring you Tier-1 quality components at competitive costs.</p>
+        </div>
+
+        <div class="partner-marquee-container relative w-full overflow-hidden">
+            <!-- Fade gradients on left and right edges for seamless look -->
+            <div
+                class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-surface-container-low to-transparent z-10 pointer-events-none">
+            </div>
+            <div
+                class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-surface-container-low to-transparent z-10 pointer-events-none">
+            </div>
+
+            <div class="flex animate-partner-marquee gap-6 md:gap-8 w-max py-2">
+                <!-- First Set -->
+                <div class="flex items-center gap-6 md:gap-8 shrink-0">
+                    <!-- Solis -->
+                    <a href="solis.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="8 8 147 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="20" stroke="#F97316" stroke-width="4"
+                                        stroke-dasharray="8 4"></circle>
+                                    <circle cx="30" cy="30" r="12" fill="#F97316"></circle>
+                                    <text x="65" y="39" font-family="'Sora', sans-serif" font-weight="700"
+                                        font-size="28" fill="#0F172A">solis</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        Inverters</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">Solis</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Reliable string and hybrid
+                                        inverters with industry-leading efficiency.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Sungrow -->
+                    <a href="sungrow.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="12 15 175 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 42 L25 18 L35 42 Z" fill="#1E40AF"></path>
+                                    <path d="M30 42 L40 18 L50 42 Z" fill="#EF4444" opacity="0.8"></path>
+                                    <circle cx="23" cy="25" r="5" fill="#EAB308"></circle>
+                                    <text x="62" y="38" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="22" fill="#0F172A" letter-spacing="-0.5">SUNGROW</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        Inverters</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">Sungrow</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Global leader in PV inverter and
+                                        storage solutions.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- SWELECT -->
+                    <a href="swelect.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="12 12 155 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="15" y="15" width="30" height="30" rx="4" fill="#3B82F6"></rect>
+                                    <line x1="30" y1="15" x2="30" y2="45" stroke="#FFFFFF" stroke-width="2"></line>
+                                    <line x1="15" y1="30" x2="45" y2="30" stroke="#FFFFFF" stroke-width="2"></line>
+                                    <circle cx="30" cy="30" r="4" fill="#F97316"></circle>
+                                    <text x="58" y="37" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="20" fill="#3B82F6" letter-spacing="1">SWELECT</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        PV Modules</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">SWELECT</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Made-in-India high-performance
+                                        crystalline PV modules.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Saatvik -->
+                    <a href="saatvik.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="12 10 155 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 12 C40 12, 45 22, 38 35 C31 48, 15 45, 22 32 C29 19, 20 12, 30 12 Z"
+                                        fill="#22C55E"></path>
+                                    <circle cx="30" cy="28" r="8" fill="#EAB308"></circle>
+                                    <text x="58" y="37" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="20" fill="#1E3A8A">SAATVIK</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        PV Modules</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">Saatvik</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Mono PERC and TOPCon panels
+                                        engineered for Indian conditions.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Vikram Solar -->
+                    <a href="vikram.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="10 10 155 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M30 12 L33 22 L43 20 L36 27 L45 34 L33 35 L36 45 L28 38 L20 45 L23 35 L11 34 L20 27 L13 20 L23 22 Z"
+                                        fill="#F97316"></path>
+                                    <text x="58" y="38" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="20" fill="#1E40AF" letter-spacing="0.5">VIKRAM</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        PV Modules</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">Vikram Solar</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Award-winning bifacial and
+                                        high-efficiency modules.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Jinko Solar -->
+                    <a href="jinko.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="10 12 120 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 38 C20 25, 32 25, 42 40" stroke="#EF4444" stroke-width="5"
+                                        stroke-linecap="round"></path>
+                                    <path d="M18 20 C25 32, 35 32, 42 18" stroke="#F97316" stroke-width="4"
+                                        stroke-linecap="round"></path>
+                                    <text x="54" y="38" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="22" fill="#1E3A8A">JinKo</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        PV Modules</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">Jinko Solar</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Tier-1 global manufacturer of
+                                        N-Type TOPCon modules.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- JA Solar -->
+                    <a href="ja-solar.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="10 10 165 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="18" fill="#DC2626"></circle>
+                                    <path d="M22 30 L30 18 L38 30 L34 30 L30 24 L26 30 Z" fill="#FBBF24"></path>
+                                    <circle cx="30" cy="32" r="3" fill="#FFFFFF"></circle>
+                                    <text x="58" y="38" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="22" fill="#0F172A">JA SOLAR</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        PV Modules</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">JA Solar</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Premium photovoltaic modules
+                                        trusted in 135+ countries.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- BOS Kit -->
+                    <a href="bos.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="12" y="15" width="36" height="30" rx="3" fill="#64748B"></rect>
+                                    <path d="M12 25 H48 M12 35 H48 M24 15 V45 M36 15 V45" stroke="#FFFFFF"
+                                        stroke-width="2"></path>
+                                    <text x="58" y="32" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="22" fill="#334155" letter-spacing="1">BOS</text>
+                                    <text x="58" y="44" font-family="'Sora', sans-serif" font-weight="600" font-size="8"
+                                        fill="#64748B" letter-spacing="1.5">ACCESSORIES</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">BOS
+                                        Accessories</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">BOS Kit</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Mounting structure, AJBs, DC/AC
+                                        cables, connectors and monitoring.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Second Set (Duplicate for Continuous Marquee) -->
+                <div class="flex items-center gap-6 md:gap-8 shrink-0">
+                    <!-- Solis -->
+                    <a href="solis.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="8 8 147 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="20" stroke="#F97316" stroke-width="4"
+                                        stroke-dasharray="8 4"></circle>
+                                    <circle cx="30" cy="30" r="12" fill="#F97316"></circle>
+                                    <text x="65" y="39" font-family="'Sora', sans-serif" font-weight="700"
+                                        font-size="28" fill="#0F172A">solis</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        Inverters</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">Solis</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Reliable string and hybrid
+                                        inverters with industry-leading efficiency.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Sungrow -->
+                    <a href="sungrow.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="12 15 175 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 42 L25 18 L35 42 Z" fill="#1E40AF"></path>
+                                    <path d="M30 42 L40 18 L50 42 Z" fill="#EF4444" opacity="0.8"></path>
+                                    <circle cx="23" cy="25" r="5" fill="#EAB308"></circle>
+                                    <text x="62" y="38" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="22" fill="#0F172A" letter-spacing="-0.5">SUNGROW</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        Inverters</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">Sungrow</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Global leader in PV inverter and
+                                        storage solutions.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- SWELECT -->
+                    <a href="swelect.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="12 12 155 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="15" y="15" width="30" height="30" rx="4" fill="#3B82F6"></rect>
+                                    <line x1="30" y1="15" x2="30" y2="45" stroke="#FFFFFF" stroke-width="2"></line>
+                                    <line x1="15" y1="30" x2="45" y2="30" stroke="#FFFFFF" stroke-width="2"></line>
+                                    <circle cx="30" cy="30" r="4" fill="#F97316"></circle>
+                                    <text x="58" y="37" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="20" fill="#3B82F6" letter-spacing="1">SWELECT</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        PV Modules</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">SWELECT</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Made-in-India high-performance
+                                        crystalline PV modules.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Saatvik -->
+                    <a href="saatvik.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="12 10 155 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 12 C40 12, 45 22, 38 35 C31 48, 15 45, 22 32 C29 19, 20 12, 30 12 Z"
+                                        fill="#22C55E"></path>
+                                    <circle cx="30" cy="28" r="8" fill="#EAB308"></circle>
+                                    <text x="58" y="37" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="20" fill="#1E3A8A">SAATVIK</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        PV Modules</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">Saatvik</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Mono PERC and TOPCon panels
+                                        engineered for Indian conditions.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Vikram Solar -->
+                    <a href="vikram.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="10 10 155 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M30 12 L33 22 L43 20 L36 27 L45 34 L33 35 L36 45 L28 38 L20 45 L23 35 L11 34 L20 27 L13 20 L23 22 Z"
+                                        fill="#F97316"></path>
+                                    <text x="58" y="38" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="20" fill="#1E40AF" letter-spacing="0.5">VIKRAM</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        PV Modules</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">Vikram Solar</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Award-winning bifacial and
+                                        high-efficiency modules.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Jinko Solar -->
+                    <a href="jinko.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="10 12 120 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 38 C20 25, 32 25, 42 40" stroke="#EF4444" stroke-width="5"
+                                        stroke-linecap="round"></path>
+                                    <path d="M18 20 C25 32, 35 32, 42 18" stroke="#F97316" stroke-width="4"
+                                        stroke-linecap="round"></path>
+                                    <text x="54" y="38" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="22" fill="#1E3A8A">JinKo</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        PV Modules</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">Jinko Solar</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Tier-1 global manufacturer of
+                                        N-Type TOPCon modules.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- JA Solar -->
+                    <a href="ja-solar.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="10 10 165 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="18" fill="#DC2626"></circle>
+                                    <path d="M22 30 L30 18 L38 30 L34 30 L30 24 L26 30 Z" fill="#FBBF24"></path>
+                                    <circle cx="30" cy="32" r="3" fill="#FFFFFF"></circle>
+                                    <text x="58" y="38" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="22" fill="#0F172A">JA SOLAR</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">Solar
+                                        PV Modules</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">JA Solar</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Premium photovoltaic modules
+                                        trusted in 135+ countries.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- BOS Kit -->
+                    <a href="bos.html" class="partner-flip-card">
+                        <div class="partner-flip-card-inner">
+                            <div class="partner-flip-card-front">
+                                <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="12" y="15" width="36" height="30" rx="3" fill="#64748B"></rect>
+                                    <path d="M12 25 H48 M12 35 H48 M24 15 V45 M36 15 V45" stroke="#FFFFFF"
+                                        stroke-width="2"></path>
+                                    <text x="58" y="32" font-family="'Sora', sans-serif" font-weight="800"
+                                        font-size="22" fill="#334155" letter-spacing="1">BOS</text>
+                                    <text x="58" y="44" font-family="'Sora', sans-serif" font-weight="600" font-size="8"
+                                        fill="#64748B" letter-spacing="1.5">ACCESSORIES</text>
+                                </svg>
+                            </div>
+                            <div class="partner-flip-card-back">
+                                <div class="space-y-1.5">
+                                    <span
+                                        class="bg-white/20 text-white font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block text-[10px]">BOS
+                                        Accessories</span>
+                                    <h5 class="font-bold text-white text-lg leading-tight">BOS Kit</h5>
+                                    <p class="text-white/90 text-xs leading-relaxed">Mounting structure, AJBs, DC/AC
+                                        cables, connectors and monitoring.</p>
+                                </div>
+                                <span
+                                    class="bg-white text-[#2B3152] hover:bg-[#F97316] hover:text-white px-3 py-1.5 rounded-lg font-bold text-xs flex items-center gap-1.5 transition-all duration-300 shadow-sm mt-3">Explore
+                                    <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- <section class="py-section-gap-desktop bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-grid-gutter grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div class="relative">
+                <div class="relative z-10 shadow-2xl">
+                    <img alt="Builders of Future" class="w-full h-auto" src="https://picsum.photos/id/381/800/600">
+                </div>
+                <div
+                    class="absolute -top-16 -left-16 text-[220px] font-bold text-slate-dark/5 opacity-40 select-none leading-none z-0">
+                    BUILD</div>
+            </div>
+            <div>
+                <span class="font-label-caps text-label-caps gradient-text tracking-widest block mb-5 uppercase">About
+                    Company</span>
+                <h2 class="font-headline-lg text-5xl text-slate-dark mb-8">We are Builders of <span
+                        class="gradient-text">Future</span></h2>
+                <div class="space-y-6 text-on-surface-variant font-body-lg mb-10">
+                    <p class="">Solar has a powerful impact. Generate your own clean energy, reduce your monthly
+                        electricity bills, protect yourself from rate hikes and use those savings to empower your life.
+                    </p>
+                    <p class="">It’s a substantial payoff, and you get the feel-good bonus for doing the environmentally
+                        right thing. In addition to being a local solar solution, we are also a licensed partner in
+                        sustainable innovation.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-10">
+                    <a class="btn-sky btn-transition font-label-caps text-label-caps py-4 px-10 font-bold shadow-md"
+                        href="company.html">ABOUT COMPANY</a>
+                    <a class="flex items-center gap-4 group" href="#">
+                        <span
+                            class="w-14 h-14 rounded-full border-2 border-primary flex items-center justify-center text-primary group-hover:bg-orange-hover group-hover:text-white group-hover:border-transparent transition-all duration-400"
+                            style="transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;">
+                            <span class="material-symbols-outlined text-2xl"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+                        </span>
+                        <span
+                            class="font-label-caps text-label-caps text-slate-dark font-bold tracking-widest group-hover:text-primary transition-colors duration-400">SEE
+                            HOW WE WORK</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
     <!-- Energy Solutions Section -->
     <section class="py-section-gap-desktop bg-surface-container-low">
@@ -1201,11 +2023,16 @@
                     class="font-label-caps text-label-caps text-white mb-10 border-b border-primary/40 pb-4 inline-block uppercase tracking-widest font-bold">
                     Quick Links</h4>
                 <ul class="space-y-4 text-sm font-medium">
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="index.html">Home</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="about.html">About Us</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="products.html">Products</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="company.html">Company</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="projects.html">Projects</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="index.html">Home</a>
+                    </li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="about.html">About
+                            Us</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400"
+                            href="products.html">Products</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400"
+                            href="company.html">Company</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400"
+                            href="projects.html">Projects</a></li>
                 </ul>
             </div>
             <!-- Resources -->
@@ -1214,10 +2041,14 @@
                     class="font-label-caps text-label-caps text-white mb-10 border-b border-primary/40 pb-4 inline-block uppercase tracking-widest font-bold">
                     Resources</h4>
                 <ul class="space-y-4 text-sm font-medium">
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="media.html">Media</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="blog.html">Blog</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="careers.html">Careers</a></li>
-                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="contacts.html">Contacts</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400"
+                            href="media.html">Media</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400" href="blog.html">Blog</a>
+                    </li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400"
+                            href="careers.html">Careers</a></li>
+                    <li class=""><a class="hover:text-primary transition-colors duration-400"
+                            href="contacts.html">Contacts</a></li>
                 </ul>
             </div>
             <!-- Services-->
@@ -1251,6 +2082,11 @@
                             class="material-symbols-outlined text-[16px] text-primary">mail</span> Kingsol@site.com</li>
                     <li class="flex items-center gap-2"><span
                             class="material-symbols-outlined text-[16px] text-primary">call</span> 800 326 9054</li>
+                    <li class="pt-2"><a
+                            class="flex items-center gap-2 text-primary hover:text-white transition-colors duration-400 font-semibold"
+                            href="assets/docs/company-brochure.pdf" download><span
+                                class="material-symbols-outlined text-[18px]">download</span> Download Brochure
+                            (PDF)</a></li>
                 </ul>
             </div>
         </div>
@@ -1315,6 +2151,59 @@
                 // Fallback for older browsers
                 startCounters();
             }
+        })();
+    </script>
+
+    <!-- Floating Action Buttons: WhatsApp & Back-To-Top -->
+    <div id="floating-buttons" class="fixed z-50">
+        <!-- WhatsApp Button (Bottom-Left) -->
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+            class="fixed bottom-6 left-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 group"
+            title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
+            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.758zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+            <span
+                class="absolute left-16 bg-slate-dark text-white text-xs font-semibold px-3 py-1.5 rounded-md shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                Chat on WhatsApp
+            </span>
+        </a>
+
+        <!-- Back to Top Button (Bottom-Right) -->
+        <button id="back-to-top"
+            class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-primary hover:bg-orange-hover text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-110 opacity-0 pointer-events-none transition-all duration-300 group"
+            title="Back to top" aria-label="Back to top">
+            <span class="material-symbols-outlined text-2xl font-bold">arrow_upward</span>
+            <span
+                class="absolute right-14 bg-slate-dark text-white text-xs font-semibold px-3 py-1.5 rounded-md shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                Back to Top
+            </span>
+        </button>
+    </div>
+
+    <!-- Floating Buttons JS -->
+    <script>
+        (function () {
+            var backToTopBtn = document.getElementById('back-to-top');
+            if (!backToTopBtn) return;
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                    backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+                } else {
+                    backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
         })();
     </script>
 </body>
